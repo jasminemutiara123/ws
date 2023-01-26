@@ -1,7 +1,7 @@
 package main
 
 import (
-	"chapter01/url"
+	"chapter02/url"
 	"log"
 
 	"github.com/gofiber/fiber/v2"
