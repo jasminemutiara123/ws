@@ -2,8 +2,10 @@ package controller
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/websocket/v2"
 )
 
 type Person struct {
@@ -32,4 +34,20 @@ func PostPerson(c *fiber.Ctx) error {
 	var a Response
 	a.Status = "ok"
 	return c.JSON(a)
+}
+
+func WebSocket(c *websocket.Conn) {
+	for {
+		mtype, msg, err := c.ReadMessage()
+		if err != nil {
+			break
+		}
+		log.Printf("Read: %s", msg)
+
+		err = c.WriteMessage(mtype, msg)
+		if err != nil {
+			break
+		}
+	}
+
 }
