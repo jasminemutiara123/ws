@@ -11,6 +11,5 @@ func Web(page *fiber.App) {
 	page.Get("/", controller.GetHelloword)
 	page.Get("/ws", websocket.New(controller.WebSocket))
 	page.Post("/person", controller.PostPerson)
-	page.Get("/person/:name", controller.GetPerson)
 
 }

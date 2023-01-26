@@ -36,21 +36,6 @@ func PostPerson(c *fiber.Ctx) error {
 	return c.JSON(a)
 }
 
-func GetPerson(c *fiber.Ctx) error {
-	person := new(Person)
-
-	// Binds the request body to the Person struct
-	if err := c.BodyParser(person); err != nil {
-		return err
-	}
-
-	// Print data from the Person struct
-	fmt.Println(person.Name, person.Email)
-	var a Response
-	a.Status = c.Params("name")
-	return c.JSON(a)
-}
-
 func WebSocket(c *websocket.Conn) {
 	for {
 		mtype, msg, err := c.ReadMessage()
