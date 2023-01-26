@@ -11,6 +11,10 @@ type Person struct {
 	Email string `json:"email" xml:"email" form:"email"`
 }
 
+type Response struct {
+	Status string `json:"status" xml:"status" form:"status"`
+}
+
 func GetHelloword(c *fiber.Ctx) error {
 	return c.SendString("Hello, World!")
 }
@@ -25,5 +29,7 @@ func PostPerson(c *fiber.Ctx) error {
 
 	// Print data from the Person struct
 	fmt.Println(person.Name, person.Email)
-	return c.SendString(person.Name)
+	var a Response
+	a.Status = "ok"
+	return c.JSON(a)
 }
