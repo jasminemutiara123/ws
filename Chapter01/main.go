@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	app := fiber.New()
-	url.Web(app)
-	log.Fatal(app.Listen(":3000"))
+	site := fiber.New()
+	url.Web(site)
+	log.Fatal(site.Listen(":3000"))
 }
