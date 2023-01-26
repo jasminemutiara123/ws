@@ -7,6 +7,7 @@ import (
 )
 
 func Web(page *fiber.App) {
-	page.Get("/", controller.Helloword)
+	page.Get("/", controller.GetHelloword)
+	page.Post("/person", controller.PostPerson)
 
 }
