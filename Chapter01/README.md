@@ -8,3 +8,6 @@ go mod init chapter01
 
 go get github.com/gofiber/fiber/v2
 
+github.com/gofiber/websocket/v2
+
+ws://127.0.0.1:3000/ws
