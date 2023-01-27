@@ -37,24 +37,6 @@ func WebSocket(c *websocket.Conn) {
 		c.Close()
 	}()
 
-	for {
-		messageType, message, err := c.ReadMessage()
-		if err != nil {
-			if websocket.IsUnexpectedCloseError(err, websocket.CloseGoingAway, websocket.CloseAbnormalClosure) {
-				log.Println("read error:", err)
-			}
-
-			return // Calls the deferred function, i.e. closes the connection on error
-		}
-
-		if messageType == websocket.TextMessage {
-			// Broadcast the received message
-			module.Broadcast <- string(message)
-		} else {
-			log.Println("websocket message received of type", messageType)
-		}
-	}
-
 }
 
 func GetHelloword(c *fiber.Ctx) error {
