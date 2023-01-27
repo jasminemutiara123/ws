@@ -18,7 +18,6 @@ type Message struct {
 
 var Clients = make(map[string]*websocket.Conn) // Note: although large maps with pointer-like types (e.g. strings) as keys are slow, using pointers themselves as keys is acceptable and fast
 var Register = make(chan Client)
-var Broadcast = make(chan string)
 var SendMesssage = make(chan Message)
 var Unregister = make(chan string)
 
@@ -59,7 +58,7 @@ func WebSocket(c *websocket.Conn) (Id string) {
 	}
 	Id = string(message)
 	if messageType == websocket.TextMessage {
-		// Broadcast the received message
+		// Get the received message
 		// Register the client
 		s = Client{
 			Id:   Id,
