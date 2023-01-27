@@ -1,7 +1,7 @@
 package main
 
 import (
-	"chapter03/url"
+	"chapter06/url"
 	"log"
 
 	"github.com/whatsauth/wasocket"
