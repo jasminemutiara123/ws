@@ -46,7 +46,7 @@ func RunHub() {
 	}
 }
 
-func WebSocket(c *websocket.Conn) (Id string) {
+func RunSocket(c *websocket.Conn) (Id string) {
 	var s Client
 	messageType, message, err := c.ReadMessage()
 	if err != nil {
