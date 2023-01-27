@@ -18,7 +18,8 @@ type Response struct {
 }
 
 func GetHelloword(c *fiber.Ctx) error {
-	return c.SendString("Hello, World!")
+
+	return c.SendString(string(c.Request().Host()))
 }
 
 func PostPerson(c *fiber.Ctx) error {
@@ -37,6 +38,7 @@ func PostPerson(c *fiber.Ctx) error {
 }
 
 func GetPerson(c *fiber.Ctx) error {
+	c.Request().Host()
 	person := new(Person)
 
 	// Binds the request body to the Person struct
