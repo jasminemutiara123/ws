@@ -9,18 +9,32 @@ import (
 )
 
 func WebSocket(c *websocket.Conn) {
-	// Register the client
-	s := module.Client{
-		Id:   "test",
-		Conn: c,
+	var s module.Client
+	messageType, message, err := c.ReadMessage()
+	if err != nil {
+		if websocket.IsUnexpectedCloseError(err, websocket.CloseGoingAway, websocket.CloseAbnormalClosure) {
+			log.Println("read error:", err)
+		}
+
+		return // Calls the deferred function, i.e. closes the connection on error
 	}
+	if messageType == websocket.TextMessage {
+		// Broadcast the received message
+		// Register the client
+		s = module.Client{
+			Id:   string(message),
+			Conn: c,
+		}
+		module.Register <- s
+	} else {
+		log.Println("websocket message received of type", messageType)
+	}
+
 	// When the function returns, unregister the client and close the connection
 	defer func() {
 		module.Unregister <- s.Id
 		c.Close()
 	}()
-
-	module.Register <- s
 
 	for {
 		messageType, message, err := c.ReadMessage()
