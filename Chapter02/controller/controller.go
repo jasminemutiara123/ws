@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 
+	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/websocket/v2"
 )
 
@@ -54,6 +55,15 @@ func WebSocket(c *websocket.Conn) {
 		}
 	}
 
+}
+
+func GetHelloword(c *fiber.Ctx) error {
+	a := module.Message{
+		Id:      "testing",
+		Message: "hello word",
+	}
+	module.SendMesssage <- a
+	return c.SendString("Hello, World!")
 }
 
 func GetWebSocketId(c *websocket.Conn) {
