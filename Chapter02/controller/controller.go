@@ -9,14 +9,18 @@ import (
 )
 
 func WebSocket(c *websocket.Conn) {
+	// Register the client
+	s := module.Client{
+		Id:   "test",
+		Conn: c,
+	}
 	// When the function returns, unregister the client and close the connection
 	defer func() {
-		module.Unregister <- c
+		module.Unregister <- s.Id
 		c.Close()
 	}()
 
-	// Register the client
-	module.Register <- c
+	module.Register <- s
 
 	for {
 		messageType, message, err := c.ReadMessage()
