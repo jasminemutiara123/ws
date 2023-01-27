@@ -1,10 +1,9 @@
 package controller
 
 import (
+	"chapter02/module"
 	"fmt"
 	"log"
-
-	"chapter02/model"
 
 	"github.com/gofiber/websocket/v2"
 )
@@ -12,12 +11,12 @@ import (
 func WebSocket(c *websocket.Conn) {
 	// When the function returns, unregister the client and close the connection
 	defer func() {
-		model.Unregister <- c
+		module.Unregister <- c
 		c.Close()
 	}()
 
 	// Register the client
-	model.Register <- c
+	module.Register <- c
 
 	for {
 		messageType, message, err := c.ReadMessage()
@@ -31,7 +30,7 @@ func WebSocket(c *websocket.Conn) {
 
 		if messageType == websocket.TextMessage {
 			// Broadcast the received message
-			model.Broadcast <- string(message)
+			module.Broadcast <- string(message)
 		} else {
 			log.Println("websocket message received of type", messageType)
 		}
