@@ -1,7 +1,7 @@
 package main
 
 import (
-	"chapter02/model"
+	"chapter02/module"
 	"chapter02/url"
 	"log"
 
@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	go model.RunHub()
+	go module.RunHub()
 	site := fiber.New()
 	url.Web(site)
 	log.Fatal(site.Listen(":3000"))
