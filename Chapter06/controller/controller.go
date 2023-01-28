@@ -20,8 +20,13 @@ func GetHelloword(c *fiber.Ctx) error {
 		Id:      "testing",
 		Message: "hello word",
 	}
-	wasocket.SendMesssage <- a
-	return c.SendString("Hello, World!")
+	var ada string
+	//wasocket.SendMesssage <- a
+	if wasocket.Clients["testing"] != nil {
+		ada = "soket tersedia"
+		wasocket.SendStructTo("testing", a)
+	}
+	return c.SendString(ada)
 }
 
 func GetWebSocketId(c *websocket.Conn) {
