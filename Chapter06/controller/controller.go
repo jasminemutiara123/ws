@@ -3,6 +3,7 @@ package controller
 import (
 	"fmt"
 	"log"
+	"strconv"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/websocket/v2"
@@ -20,13 +21,9 @@ func GetHelloword(c *fiber.Ctx) error {
 		Id:      "testing",
 		Message: "hello word",
 	}
-	var ada string
 	//wasocket.SendMesssage <- a
-	if wasocket.Clients["testing"] != nil {
-		ada = "soket tersedia"
-		wasocket.SendStructTo("testing", a)
-	}
-	return c.SendString(ada)
+	ada := wasocket.SendStructTo("testing", a)
+	return c.SendString(strconv.FormatBool(ada))
 }
 
 func GetWebSocketId(c *websocket.Conn) {
