@@ -34,6 +34,11 @@ $ git config --global user.email johndoe@example.com
 3. Pilih menu </> atau code pilih javascript fetch
 ![image](https://user-images.githubusercontent.com/11188109/218394378-778f0deb-f3fd-4d3b-a276-1987c16bc76b.png)
 
+# Tailwind
+
+Untuk membuat antarmuka menggunakan komponen tailwind contoh :https://tailwindcomponents.com/component/multi-line-table
+
+lakukan download. fork repo ini. kemudian open with code. taruh file htmlnya di folder di dalam folder site
 
 # Menghubungkan situs dengan Public API
 
