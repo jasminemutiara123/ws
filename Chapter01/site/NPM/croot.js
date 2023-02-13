@@ -20,8 +20,6 @@ function tampilkan(result){
   hasil=JSON.parse(result);
   trhi=trnyatabel.replace("#TEXT#",hasil[0].text)
   txt=hasil.forEach(isikantabel);
-
-  
 }
 
 function isikantabel(value){
