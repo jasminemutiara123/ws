@@ -109,11 +109,11 @@ install plugin live server
 
 ## Tugas
 
-1. Buat folder NPM di dalam folder site di dalam folder chapter01.
+1. Buat folder NPM di dalam folder site di dalam folder chapter01. Pilih Public API
 
-2. Ada dua file yang dibuat yaitu index.html dan croot.js.
+2. Ada dua file yang dibuat yaitu index.html dan croot.js. Men
 
-3. Buat html bisa membaca semua data dari API, pastikan bisa diakses.
+3. Buat html bisa membaca semua data dari API, pastikan setiap orang berbeda, tidak boleh sama API nya.
     ![image](https://user-images.githubusercontent.com/11188109/218429415-dc895212-8982-4d73-9010-32cf5e72906f.png)
 
 4. Pull Request Dengan Subjek : 1-KELAS-NPM-NAMA , 
