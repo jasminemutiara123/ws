@@ -102,5 +102,24 @@ install plugin live server
     untuk akses variabel global hasil kita pakai console log
     
     ![image](https://user-images.githubusercontent.com/11188109/218420311-3aa5700f-f6ec-4d5a-82d3-2000fdb24df6.png)
+    
+    kemudian tambahkan ramuan looping untuk mengeluarkan semuanya
+    
+    ![image](https://user-images.githubusercontent.com/11188109/218428781-5b8a7467-b027-48e6-aaf2-8437be0ec8c8.png)
+
+## Tugas
+
+1. Buat folder NPM di dalam folder site di dalam folder chapter01.
+
+2. Ada dua file yang dibuat yaitu index.html dan croot.js.
+
+3. Buat html bisa membaca semua data dari API, pastikan bisa diakses.
+    ![image](https://user-images.githubusercontent.com/11188109/218429415-dc895212-8982-4d73-9010-32cf5e72906f.png)
+
+4. Pull Request Dengan Subjek : 1-KELAS-NPM-NAMA , 
+5. Description : please include your screenshoot of your application and attach your javascript certificate.
+    * Take course from [mygreatlearning](https://www.mygreatlearning.com/academy/learn-for-free/courses/introduction-to-javascript) or from [LinkedIn](https://www.linkedin.com/learning/javascript-for-web-designers-3)
+    * Take Javascript Learning from [Google](https://learndigital.withgoogle.com/digitalgarage/course/learn-programming-with-javascript) for next class meeting.
+6. After Approved you might go home
 
 
