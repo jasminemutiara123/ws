@@ -39,6 +39,8 @@ $ git config --global user.email johndoe@example.com
 Untuk membuat antarmuka menggunakan komponen tailwind contoh :https://tailwindcomponents.com/component/multi-line-table
 
 lakukan download. fork repo ini. kemudian open with code. taruh file htmlnya di folder di dalam folder site
+![image](https://user-images.githubusercontent.com/11188109/218395570-c0c5b05f-27ff-44d8-8bf5-4c898f363e38.png)
+
 
 # Menghubungkan situs dengan Public API
 
