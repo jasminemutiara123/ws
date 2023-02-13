@@ -25,3 +25,18 @@ Just One time for first instalation of git scm,
 $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 ```
+
+# Postman
+
+1. Install postman. Pilih salah satu dari sini https://github.com/public-apis/public-apis. 
+2. lakukan request ke public api dengan postman contoh : https://alexwohlbruck.github.io/cat-facts/docs/
+
+# Menghubungkan situs dengan Public API
+
+1. Pilih salah satu dari sini https://github.com/public-apis/public-apis. contoh : https://alexwohlbruck.github.io/cat-facts/docs/
+
+2. lakukan fork repo ini
+
+3. Buat folder NPM di dalam folder site
+4. Buat template tailwindcss
+5. 
