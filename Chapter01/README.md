@@ -99,4 +99,8 @@ install plugin live server
     
     ![image](https://user-images.githubusercontent.com/11188109/218419862-983ddbba-a445-41a5-a703-f2d56829888a.png)
     
+    untuk akses variabel global hasil kita pakai console log
+    
+    ![image](https://user-images.githubusercontent.com/11188109/218420311-3aa5700f-f6ec-4d5a-82d3-2000fdb24df6.png)
+
 
