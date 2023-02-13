@@ -56,12 +56,51 @@ install plugin live server
 
 
 
+
 # Menghubungkan situs dengan Public API
 
-1. Pilih salah satu dari sini https://github.com/public-apis/public-apis. contoh : https://alexwohlbruck.github.io/cat-facts/docs/
+1. Buat folder NPM di dalam folder site
+2. Buat template tailwindcss simpan sebagai index.html
+3. buat file js dengan nama croot.js panggil di bawah dengan script, sebelum tag </body>
+    ```html
+    <script src="./croot.js"></script>
+    ```
+4. Buka dengan live server, inspect lihat di console.
 
-2. lakukan fork repo ini
+    ![image](https://user-images.githubusercontent.com/11188109/218408763-7514c229-ce10-4a48-b275-ebf23ddbf782.png)
 
-3. Buat folder NPM di dalam folder site
-4. Buat template tailwindcss
-5. 
+6. Isi dari script croot.js contoh :
+    ```js
+    var myHeaders = new Headers();
+    myHeaders.append("Cookie", "connect.sid=s%3AMsnp_KW3uPWTf6gN4GDNl7XAoOShdRL2.VK05aaDbN1FeG%2BScGHtOuxENv5s2ABoZZzLpqN%2FUbZs");
+
+    var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    };
+
+    hasil=""
+
+    fetch("https://cat-fact.herokuapp.com/facts", requestOptions)
+      .then(response => response.text())
+      .then(result => tampilkan(result))
+      .catch(error => console.log('error', error));
+
+    function tampilkan(result){
+      console.log(result);
+      hasil=JSON.parse(result);
+
+      //document.getElementById("nama").innerHTML(result);
+    }
+    ```
+    
+    akan terlihat variabel hasil di console log
+    
+    ![image](https://user-images.githubusercontent.com/11188109/218419862-983ddbba-a445-41a5-a703-f2d56829888a.png)
+    
+    untuk akses variabel global hasil kita pakai console log
+    
+    ![image](https://user-images.githubusercontent.com/11188109/218420311-3aa5700f-f6ec-4d5a-82d3-2000fdb24df6.png)
+
+
