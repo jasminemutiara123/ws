@@ -94,3 +94,9 @@ install plugin live server
       //document.getElementById("nama").innerHTML(result);
     }
     ```
+    
+    akan terlihat variabel hasil di console log
+    
+    ![image](https://user-images.githubusercontent.com/11188109/218419862-983ddbba-a445-41a5-a703-f2d56829888a.png)
+    
+
