@@ -69,4 +69,28 @@ install plugin live server
 
     ![image](https://user-images.githubusercontent.com/11188109/218408763-7514c229-ce10-4a48-b275-ebf23ddbf782.png)
 
-6. 
+6. Isi dari script croot.js contoh :
+    ```js
+    var myHeaders = new Headers();
+    myHeaders.append("Cookie", "connect.sid=s%3AMsnp_KW3uPWTf6gN4GDNl7XAoOShdRL2.VK05aaDbN1FeG%2BScGHtOuxENv5s2ABoZZzLpqN%2FUbZs");
+
+    var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    };
+
+    hasil=""
+
+    fetch("https://cat-fact.herokuapp.com/facts", requestOptions)
+      .then(response => response.text())
+      .then(result => tampilkan(result))
+      .catch(error => console.log('error', error));
+
+    function tampilkan(result){
+      console.log(result);
+      hasil=JSON.parse(result);
+
+      //document.getElementById("nama").innerHTML(result);
+    }
+    ```
