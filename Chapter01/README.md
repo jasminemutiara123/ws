@@ -48,6 +48,10 @@ fork repo
 
 lakukan clone repo yang di fork
 
+![image](https://user-images.githubusercontent.com/11188109/218396201-b906ff2c-af14-4d65-b9c1-bc9f52882fe7.png)
+
+
+
 
 # Menghubungkan situs dengan Public API
 
