@@ -56,12 +56,13 @@ install plugin live server
 
 
 
+
 # Menghubungkan situs dengan Public API
 
-1. Pilih salah satu dari sini https://github.com/public-apis/public-apis. contoh : https://alexwohlbruck.github.io/cat-facts/docs/
-
-2. lakukan fork repo ini
-
-3. Buat folder NPM di dalam folder site
-4. Buat template tailwindcss
-5. 
+1. Buat folder NPM di dalam folder site
+2. Buat template tailwindcss simpan sebagai index.html
+3. buat file js dengan nama croot.js panggil di bawah dengan script, sebelum tag </body>
+    ```html
+    <script src="./croot.js"></script>
+    ```
+4. Buka dengan live server, inspect lihat di console
