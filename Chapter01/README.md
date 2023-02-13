@@ -65,5 +65,8 @@ install plugin live server
     ```html
     <script src="./croot.js"></script>
     ```
-4. Buka dengan live server, inspect lihat di console. Jika belum muncul, atau error coba dengan API yang lain.
-5. 
+4. Buka dengan live server, inspect lihat di console.
+
+    ![image](https://user-images.githubusercontent.com/11188109/218408763-7514c229-ce10-4a48-b275-ebf23ddbf782.png)
+
+6. 
