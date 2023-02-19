@@ -1,9 +1,5 @@
-var myHeaders = new Headers();
-myHeaders.append("Cookie", "connect.sid=s%3AMsnp_KW3uPWTf6gN4GDNl7XAoOShdRL2.VK05aaDbN1FeG%2BScGHtOuxENv5s2ABoZZzLpqN%2FUbZs");
-
 var requestOptions = {
     method: 'GET',
-    headers: myHeaders ,
     redirect: 'follow'
   };
 
