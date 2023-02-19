@@ -30,7 +30,7 @@ function tampilkan(result){
 
 function isiintabelnya(value){
     console.log(value)
-    txt+= trtaabel.replace("#crot#", value.nguk)
+    txt+= trtaabel.replace("#crot#", value.nome)
     document.getElementById("cakep").innerHTML=txt;
     return txt
 
