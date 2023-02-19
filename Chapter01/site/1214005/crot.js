@@ -18,7 +18,7 @@ trtaabel = `<tr class="hover:bg-gray-50">
 </tr>`;
 
 
-  fetch("https://api.jikan.moe/v4/anime?q=anime%20my%20hero%20academia&sfw", requestOptions)
+  fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0", requestOptions)
     .then(response => response.text())
     .then(result => tampilkan(result))
     .catch(error => console.log('error', error));
@@ -28,12 +28,12 @@ function tampilkan(result){
     console.log(result)
     hasil=JSON.parse(result);
     // crot = trtaabel.replace("#text#", hasil.data[1].title)
-    txt = hasil.data.forEach(isiintabelnya);
+    txt = hasil.results.forEach(isiintabelnya);
 }
 
 function isiintabelnya(value){
     console.log(value)
-    txt+= trtaabel.replace("#TEXT#", value.title_english)
+    txt+= trtaabel.replace("#TEXT#", value.name)
     document.getElementById("judul").innerHTML=txt;
     return txt
 
