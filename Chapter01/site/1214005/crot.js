@@ -3,7 +3,7 @@ var requestOptions = {
     redirect: 'follow'
   };
 
-hasil = ""
+hasil =""
 txt=""
 
 trtaabel = `<tr class="hover:bg-gray-50">
