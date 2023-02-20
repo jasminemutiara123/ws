@@ -178,20 +178,16 @@ Pasti merasa aneh bukan setelah menekan tombol, tapi tampilan tidak berubah sama
 ## Tugas
 
 * Buatlah form sign up yang melakukan POST ke pipedream.com ketika klik button.
-* 
-* CSS menggunakan tailwind componen
-* Pull Request dengan nama 2-Kelas-NPM-NAMA di folder Chapter02/A/NPM
-* Sertakan skrinsutan dari requestcatcher.com atau webhook.site atau pipedream.com
-* Github Pages Sudah jalan di repo masing-masing
-* Nama file html wajib diberi nama index.html
+* Buat Folder NPM didalam Chapter02/A yang berisi 2 file minimal js dan html, dengan nama index.html, croot.js. Boleh menambahkan file css atau favicon.
+* Form dibangun dengan menggunakan CSS tailwind.
+* Pull Request dengan nama 2-Kelas-NPM-NAMA di folder Chapter02/A/NPM, dengan deskripsi disertakan di bawah ini.
+* Sertakan skrinsutan dari live server aplikasi dan pipedream.com
+* Sertakan link Github Pages Sudah jalan di repo masing-masing
+* Sertakan skinsutan juga sertifikat 4 sertifikasi berikut:
+  * https://www.mygreatlearning.com/academy/learn-for-free/courses/go-programming-language 
+  * https://www.mindluster.com/certificate/3394
+  * https://www.codecademy.com/learn/learn-go
+  * https://www.coursera.org/specializations/google-golang
 
 
-## Tugas
 
-Ambil sertifikasi :
-* https://www.mygreatlearning.com/academy/learn-for-free/courses/go-programming-language 
-* https://www.mindluster.com/certificate/3394
-* https://www.codecademy.com/learn/learn-go
-* https://www.coursera.org/specializations/google-golang
-
-lampirkan pada saat pull request chapter ini, bisa di deskrimsi maupun komentar
