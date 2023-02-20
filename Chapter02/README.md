@@ -1,4 +1,4 @@
-# HTTP Header Barrier
+# HTTP Header and Body Capture
 
 ## Syarat Umum
 
