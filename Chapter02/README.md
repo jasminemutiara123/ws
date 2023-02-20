@@ -27,3 +27,6 @@ Ambil sertifikasi :
 * https://www.mygreatlearning.com/academy/learn-for-free/courses/go-programming-language 
 * https://www.mindluster.com/certificate/3394
 * https://www.codecademy.com/learn/learn-go
+* https://www.coursera.org/specializations/google-golang
+
+Buat Package golang
