@@ -28,6 +28,10 @@ function PostSignUp(namadepan,namabelakang,email,password){
 
     fetch("https://eol0j1lmdtbpzp.m.pipedream.net", requestOptions)
     .then(response => response.text())
-    .then(result => console.log(result))
+    .then(result => GetResponse(result))
     .catch(error => console.log('error', error));
+}
+
+function GetResponse(result){
+    document.getElementById("formsignup").innerHTML = result;
 }
