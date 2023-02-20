@@ -95,7 +95,7 @@ Disini kita akan membuka Postman untuk melakukan testing endpoint dahulu, dengan
 * Cari element dari input dan buttonnya kemudian kita beri id
   ![image](https://user-images.githubusercontent.com/11188109/220205296-cdc9453b-58dd-4727-9d77-c5c250d3bb00.png) 
   ![image](https://user-images.githubusercontent.com/11188109/220205510-205c1381-073b-451f-b29c-ede13072c333.png)
-* Buat file js kita masukkan dahulu javascript yang didapatkan dari postman ke js tersebut, kemudian panggil pada bagian bawah sebelum tag </body>
+* Buat file js kita masukkan dahulu javascript yang didapatkan dari postman ke js tersebut, kemudian panggil pada bagian bawah sebelum tag penutup body
   ![image](https://user-images.githubusercontent.com/11188109/220205858-d311831a-d9d6-4cad-b8ea-94dca460121c.png)
   ```html
   <script src="croot.js"></script>
