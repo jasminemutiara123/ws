@@ -7,9 +7,6 @@
     const formData = new FormData(form);
     
     var myHeaders = new Headers();
-    myHeaders.append("Access-Control-Allow-Origin", "*");
-    myHeaders.append("Access-Control-Allow-Credentials", "true");
-    myHeaders.append("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
     myHeaders.append("Content-Type", "application/json");
 
     var object = {};
@@ -28,7 +25,7 @@
     console.log(requestOptions);
   
     fetch("https://eoeiygy3sjdmge3.m.pipedream.net", requestOptions)
-    .then(response => response.json())
+    .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
 
