@@ -25,10 +25,13 @@ Disini kita akan melakukan request dengan menggunakan javascript fetch.
 
 * Kunjungi pipedream.com , terus klik Sign Up Free! 
   ![image](https://user-images.githubusercontent.com/11188109/220200037-5f556ae6-3bd6-4aa3-9869-00c1d119bb51.png)
+  
 * Klik sign up with github
   ![image](https://user-images.githubusercontent.com/11188109/220200140-783f1a04-e00b-425b-a5b2-b43f546b022c.png)
+  
 * Authorize
   ![image](https://user-images.githubusercontent.com/11188109/220200197-98f46bc2-2217-4697-9e54-9034e864d4cd.png)
+  
 * Pilih Nama Workspace yang tersedia, ditandai dengan tanda centang hijau, kemudian klik Continue
   ![image](https://user-images.githubusercontent.com/11188109/220200320-707ff8e0-cc32-4196-ad3a-8cfa083b2d11.png)
 * Opsional membagikan link workspace seperti ini, https://pipedream.com/@bukupedia/invite?token=4adefabe60301ac06b000ee620533e73 . Lanjutkan dengan menekan tombol Skip.
