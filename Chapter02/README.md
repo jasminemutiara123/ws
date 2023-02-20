@@ -57,7 +57,7 @@ Disini kita akan membuka Postman untuk melakukan testing endpoint dahulu, dengan
   ![image](https://user-images.githubusercontent.com/11188109/220201839-cf090239-88eb-4506-8d4c-a0e57b68b4f6.png)
   ![image](https://user-images.githubusercontent.com/11188109/220201921-6e223896-90cf-4442-b242-7eba8b433aab.png)
 * Disana akan terlihat pada bagian headers ada Login yang kita masukkan dan pada bagian body ada json yang kita masukkan ke postman. Artinya endpoint dan http request bekerja dengan baik untuk menangkap header dan body yang dikirimkan.
-  ![image](https://user-images.githubusercontent.com/11188109/220202117-9ab13390-2fd6-4be2-9020-a2bba9c8f7e4.png)
+  ![image](https://user-images.githubusercontent.com/11188109/220203550-fc55f7f9-886c-4fdf-9beb-3fcf884b94f0.png)
 * Simpan kode javascript yang dibuat oleh postman dengan menekan tanda </> dibagian pojok kanan atas, kemudian pilih javascipt - Fetch
   ![image](https://user-images.githubusercontent.com/11188109/220203396-5b64b9f1-b0a9-41b4-853e-6de1addb0767.png)
   ```javascript
