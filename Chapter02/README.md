@@ -14,6 +14,6 @@
 
 * Buatlah form dan button yang berisi sign up biodata(minimal 5 field) yang melakukan POST ke requestcatcher.com atau webhook.site atau pipedream.com ketika klik button
 * CSS menggunakan tailwind componen
-* Pull Request dengan nama 2-Kelas-NPM-NAMA di folder Chapter02/A
+* Pull Request dengan nama 2-Kelas-NPM-NAMA di folder Chapter02/A/NPM
 * Sertakan skrinsutan dari requestcatcher.com atau webhook.site atau pipedream.com
 * Github Pages Sudah jalan di repo masing-masing
