@@ -9,6 +9,7 @@
   ![image](https://user-images.githubusercontent.com/11188109/220023734-cf442863-7ec4-40eb-abfc-4058f0ca8380.png)
 * Setting Repo untuk Github Pages
   ![image](https://user-images.githubusercontent.com/11188109/220018093-6ac9f3ea-af03-47b9-a038-76a2f5a295a2.png)
+* Ingat selalu inspect console untuk melihat error javascript, jika terjadi error CORS Police, maka ganti ke pipedream.com
   
 ## Setting Endpoint di Pipedream
 
@@ -150,29 +151,44 @@ Pada bagian ini kita akan membuat fungsi-fungsi di javascript untuk mengirimkan 
    ![image](https://user-images.githubusercontent.com/11188109/220209136-5e2ec6fa-12c0-450f-b417-91b50cd4110a.png)
    ![image](https://user-images.githubusercontent.com/11188109/220209218-73348bb6-6d29-47f5-8988-675b6c85eac0.png)
 
+### Tambahan Estetika UX
 
-  
+Pasti merasa aneh bukan setelah menekan tombol, tapi tampilan tidak berubah sama sekali seolah tidak terjadi apa-apa. Disini kita akan coba untuk mengubah tampilan jika tombol di klik, maka form akan disembunyikan dan menampilkan data yang diterima dari endpoint pipedream. Oke kita cuku menambahkan satu fungsi lagi dan memodifikasi fungsi PostSignUp() khususnya dibagian result then fetch nya. Langkahnya sebagai berikut :
 
-
-
-
-## Pre Test
-
-* Buatlah form dan button yang berisi sign up biodata(minimal 5 field) yang melakukan POST ke requestcatcher.com atau webhook.site atau pipedream.com ketika klik button
-* Ingat selalu inspect console untuk melihat error javascript, jika terjadi error CORS Police, maka ganti ke pipedream.com
-* CSS menggunakan tailwind componen
-* Pull Request dengan nama 2-Kelas-NPM-NAMA di folder Chapter02/A/NPM
-* Sertakan skrinsutan dari requestcatcher.com atau webhook.site atau pipedream.com
-* Github Pages Sudah jalan di repo masing-masing
-* Nama file html wajib diberi nama index.html
+* Pertama kita cari dulu element yang akan kita hidden, bisa menggunakan inspect elemetns untuk identifikasinya, kemudian kita kasih id
+  ![image](https://user-images.githubusercontent.com/11188109/220210224-290cb494-de07-4eb4-b403-5c21204f3a7a.png)
+  ![image](https://user-images.githubusercontent.com/11188109/220210342-a81493b4-453b-4cd1-a526-3ca1092f6ebc.png)
+* Kita coba script style display pada bagian console dengan menggunakan id yang sudah kita buat, style display mana yang bisa menghilangkan formsignup apakah block atau none. Terlihat di gambar none bisa mengilangkan element formsignup, kita akan pakai script ini di fungsi selanjutnya.
+  ![image](https://user-images.githubusercontent.com/11188109/220210618-3961fe64-a413-4320-86e7-cdfafe640c50.png)
+  ```javascript
+    document.getElementById("formsignup").style.display = 'none';
+    document.getElementById("formsignup").style.display = 'block';
+  ```
+* Tambahkan fungsi GetResponse() di file js kita yang sudah dibuat sebelumnya, dan melakukan modifikasi dari fungsi PostSignUp pada bagian then result.
+  ```javascript
+    function GetResponse(result){
+    document.getElementById("formsignup").innerHTML = result;
+    }
+  ```
+  ![image](https://user-images.githubusercontent.com/11188109/220211123-eb372a58-7507-4bd8-b54f-2f18f50d5dd9.png)
+* Kita ujicoba dengan mengisi form dan klik tombol submit, maka form kita sudah berhasil.
+  ![image](https://user-images.githubusercontent.com/11188109/220211272-70eaa594-504c-40f9-9b96-633bf9f9e676.png)
 
 
 ## Tugas
 
-Ambil sertifikasi :
-* https://www.mygreatlearning.com/academy/learn-for-free/courses/go-programming-language 
-* https://www.mindluster.com/certificate/3394
-* https://www.codecademy.com/learn/learn-go
-* https://www.coursera.org/specializations/google-golang
+* Buatlah form sign up yang melakukan POST ke pipedream.com ketika klik button.
+* Buat Folder NPM didalam Chapter02/A yang berisi 2 file minimal js dan html, dengan nama index.html, croot.js. Boleh menambahkan file css atau favicon.
+* file croot.js minimal berisi 3 fungsi, tidak boleh ada kode js diluar dari fungsi, semua harus masuk ke dalam fungsi js.
+* Form dibangun dengan menggunakan CSS tailwind, desain html tidak boleh sama, harus berbeda satu sama lain.
+* Pull Request dengan nama 2-Kelas-NPM-NAMA di folder Chapter02/A/NPM, dengan deskripsi disertakan di bawah ini.
+* Sertakan skrinsutan dari live server aplikasi dan pipedream.com
+* Sertakan link Github Pages Sudah jalan di repo masing-masing
+* Sertakan skinsutan juga sertifikat 4 sertifikasi berikut:
+  * https://www.mygreatlearning.com/academy/learn-for-free/courses/go-programming-language 
+  * https://www.mindluster.com/certificate/3394
+  * https://www.codecademy.com/learn/learn-go
+  * https://www.coursera.org/specializations/google-golang
 
-lampirkan pada saat pull request chapter ini, bisa di deskrimsi maupun komentar
+
+
