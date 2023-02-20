@@ -133,7 +133,18 @@ Pada bagian ini kita akan membuat fungsi-fungsi di javascript. Kenapa harus dibu
     .catch(error => console.log('error', error));
     }
    ```
-3. sdfds
+3. Fungsi PushButton() untuk melakukan aksi setelah menekan tombol, pada bagian html button tambahkan atribut onclick.
+
+   ![image](https://user-images.githubusercontent.com/11188109/220208507-0d5cb2cc-4979-410c-a3e0-a804caa732c4.png)
+   ```javascript
+    function PushButton(){
+    namadepan=document.getElementById("namadepan").value;
+    namabelakang=document.getElementById("namabelakang").value;
+    email=document.getElementById("email").value;
+    password=document.getElementById("password").value;
+    PostSignUp(namadepan,namabelakang,email,password);
+    }
+   ```
 4. sdfdsf
 
 
