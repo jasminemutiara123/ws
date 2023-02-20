@@ -106,17 +106,18 @@ Disini kita akan membuka Postman untuk melakukan testing endpoint dahulu, dengan
 ### Membuat Fungsi Javascript
 
 Pada bagian ini kita akan membuat fungsi-fungsi di javascript. Kenapa harus dibuat fungsi? agar kode program javascript tetap rapih dan mudah terbaca.
-1. Fungsi PostSignUp() yang berfungsi untuk melakukan Post Form Data Sign Up. Fungsi ini diambil dari postman.
+1. Fungsi PostSignUp() yang berfungsi untuk melakukan Post Form Data Sign Up. Fungsi ini diambil dari postman, yang kita modif data inputan dari id form html.
    ```javascript
-   function PostSignUp(){
+    function PostSignUp(namadepan,namabelakang,email,password){
     var myHeaders = new Headers();
     myHeaders.append("Login", "rollygantengsekali");
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-    "uuid": "sadsadsad",
-    "phonenumber": "6281312000300",
-    "delay": 1
+    "namadepan": namadepan,
+    "namabelakang": namabelakang,
+    "email": email,
+    "password": password
     });
 
     var requestOptions = {
@@ -130,7 +131,7 @@ Pada bagian ini kita akan membuat fungsi-fungsi di javascript. Kenapa harus dibu
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
-   }
+    }
    ```
 3. sdfds
 4. sdfdsf
