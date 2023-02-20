@@ -87,6 +87,10 @@ Disini kita akan membuka Postman untuk melakukan testing endpoint dahulu, dengan
 
 ### Membangun Aplikasi Pendaftaran
 
+* Kita cari dulu di google dengan keyword sign up form tailwind component free. Contoh : https://tailwindcomponents.com/component/simple-registersign-up-form/landing
+  ![image](https://user-images.githubusercontent.com/11188109/220203961-34229f29-9cce-4352-b158-bcf7ad55b6bc.png)
+* Kita unduk kodenya untuk kita pakai ditaruh di repo kita dan coba kita live server dari vscode
+
 
 
 
