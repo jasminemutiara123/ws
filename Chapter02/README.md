@@ -154,7 +154,25 @@ Pada bagian ini kita akan membuat fungsi-fungsi di javascript untuk mengirimkan 
 
 Pasti merasa aneh bukan setelah menekan tombol, tapi tampilan tidak berubah sama sekali seolah tidak terjadi apa-apa. Disini kita akan coba untuk mengubah tampilan jika tombol di klik, maka form akan disembunyikan dan menampilkan data yang diterima dari endpoint pipedream. Oke kita cuku menambahkan satu fungsi lagi dan memodifikasi fungsi PostSignUp() khususnya dibagian result then fetch nya. Langkahnya sebagai berikut :
 
-* Buat desain yang berbeda
+* Pertama kita cari dulu element yang akan kita hidden, bisa menggunakan inspect elemetns untuk identifikasinya, kemudian kita kasih id
+  ![image](https://user-images.githubusercontent.com/11188109/220210224-290cb494-de07-4eb4-b403-5c21204f3a7a.png)
+  ![image](https://user-images.githubusercontent.com/11188109/220210342-a81493b4-453b-4cd1-a526-3ca1092f6ebc.png)
+* Kita coba script style display pada bagian console dengan menggunakan id yang sudah kita buat, style display mana yang bisa menghilangkan formsignup apakah block atau none. Terlihat di gambar none bisa mengilangkan element formsignup, kita akan pakai script ini di fungsi selanjutnya.
+  ![image](https://user-images.githubusercontent.com/11188109/220210618-3961fe64-a413-4320-86e7-cdfafe640c50.png)
+  ```javascript
+    document.getElementById("formsignup").style.display = 'none';
+    document.getElementById("formsignup").style.display = 'block';
+  ```
+* Tambahkan fungsi GetResponse() di file js kita yang sudah dibuat sebelumnya, dan melakukan modifikasi dari fungsi PostSignUp pada bagian then result.
+  ```javascript
+    function GetResponse(result){
+    document.getElementById("formsignup").innerHTML = result;
+    }
+  ```
+  ![image](https://user-images.githubusercontent.com/11188109/220211123-eb372a58-7507-4bd8-b54f-2f18f50d5dd9.png)
+
+
+
   
 
 
