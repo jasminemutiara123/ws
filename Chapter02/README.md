@@ -105,8 +105,8 @@ Disini kita akan membuka Postman untuk melakukan testing endpoint dahulu, dengan
 
 ### Membuat Fungsi Javascript
 
-Pada bagian ini kita akan membuat fungsi-fungsi di javascript. Kenapa harus dibuat fungsi? agar kode program javascript tetap rapih dan mudah terbaca.
-1. Fungsi PostSignUp() yang berfungsi untuk melakukan Post Form Data Sign Up. Fungsi ini diambil dari postman, yang kita modif data inputan dari id form html.
+Pada bagian ini kita akan membuat fungsi-fungsi di javascript untuk mengirimkan data dari html menuju endpoint pipedream yang kita buat. Kenapa harus dibuat fungsi? agar kode program javascript tetap rapih dan mudah terbaca.
+1. Membuat fungsi PostSignUp() yang berfungsi untuk melakukan Post Form Data Sign Up. Fungsi ini diambil dari postman, yang kita modif data inputan dari id form html.
    ```javascript
     function PostSignUp(namadepan,namabelakang,email,password){
     var myHeaders = new Headers();
@@ -133,7 +133,7 @@ Pada bagian ini kita akan membuat fungsi-fungsi di javascript. Kenapa harus dibu
     .catch(error => console.log('error', error));
     }
    ```
-3. Fungsi PushButton() untuk melakukan aksi setelah menekan tombol, pada bagian html button tambahkan atribut onclick.
+3. Membuat fungsi PushButton() untuk melakukan aksi setelah menekan tombol, pada bagian html button tambahkan atribut onclick.
 
    ![image](https://user-images.githubusercontent.com/11188109/220208507-0d5cb2cc-4979-410c-a3e0-a804caa732c4.png)
    ```javascript
@@ -145,7 +145,13 @@ Pada bagian ini kita akan membuat fungsi-fungsi di javascript. Kenapa harus dibu
     PostSignUp(namadepan,namabelakang,email,password);
     }
    ```
-4. sdfdsf
+4. Kita test dengan klik kanan Open with live server, kita isi form nya sambil inspect console lalu klik button yang kita buat. Terlihat dari console data success dikirim. kemudian kita lihat pada dashboard pipedream data sudah diterima dengan baik oleh endpoint baik itu header maupun body.
+   ![image](https://user-images.githubusercontent.com/11188109/220209051-34a4982b-9a50-4e7f-8283-760948abfc15.png)
+   ![image](https://user-images.githubusercontent.com/11188109/220209136-5e2ec6fa-12c0-450f-b417-91b50cd4110a.png)
+   ![image](https://user-images.githubusercontent.com/11188109/220209218-73348bb6-6d29-47f5-8988-675b6c85eac0.png)
+
+
+  
 
 
 
