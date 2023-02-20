@@ -13,6 +13,7 @@
 ## Pre Test
 
 * Buatlah form dan button yang berisi sign up biodata(minimal 5 field) yang melakukan POST ke requestcatcher.com atau webhook.site atau pipedream.com ketika klik button
+* Ingat selalu inspect console untuk melihat error javascript, jika terjadi error CORS Police, maka ganti ke pipedream.com
 * CSS menggunakan tailwind componen
 * Pull Request dengan nama 2-Kelas-NPM-NAMA di folder Chapter02/A/NPM
 * Sertakan skrinsutan dari requestcatcher.com atau webhook.site atau pipedream.com
