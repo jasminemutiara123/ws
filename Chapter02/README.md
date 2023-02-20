@@ -158,7 +158,7 @@ Pasti merasa aneh bukan setelah menekan tombol, tapi tampilan tidak berubah sama
 * Pertama kita cari dulu element yang akan kita hidden, bisa menggunakan inspect elemetns untuk identifikasinya, kemudian kita kasih id
   ![image](https://user-images.githubusercontent.com/11188109/220210224-290cb494-de07-4eb4-b403-5c21204f3a7a.png)
   ![image](https://user-images.githubusercontent.com/11188109/220210342-a81493b4-453b-4cd1-a526-3ca1092f6ebc.png)
-* Kita coba script style display pada bagian console dengan menggunakan id yang sudah kita buat, style display mana yang bisa menghilangkan formsignup apakah block atau none. Terlihat di gambar none bisa mengilangkan element formsignup, kita akan pakai script ini di fungsi selanjutnya.
+* Kita coba script style display pada bagian console dengan menggunakan id yang sudah kita buat, style display mana yang bisa menghilangkan formsignup apakah block atau none. Terlihat di gambar none bisa mengilangkan element formsignup, kita **mungkin** akan pakai script ini di fungsi kita yang akan datang. Dari sini kita paham bagaimana menyembunyikan element dengan js.
   ![image](https://user-images.githubusercontent.com/11188109/220210618-3961fe64-a413-4320-86e7-cdfafe640c50.png)
   ```javascript
     document.getElementById("formsignup").style.display = 'none';
