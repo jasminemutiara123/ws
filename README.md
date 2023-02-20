@@ -1,5 +1,5 @@
-# gofiber
-Golang Fiber Framework
+# Kuliah Web Service
+Materi Kuliah Web Service, akses github pages : https://universitas.bukupedia.co.id/ws/
 
 ## URL Cek Tugas
 
