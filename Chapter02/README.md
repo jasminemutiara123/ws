@@ -29,4 +29,4 @@ Ambil sertifikasi :
 * https://www.codecademy.com/learn/learn-go
 * https://www.coursera.org/specializations/google-golang
 
-lampirkan pada saat pull request
+lampirkan pada saat pull request chapter ini, bisa di deskrimsi maupun komentar
