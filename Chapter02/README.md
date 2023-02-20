@@ -45,7 +45,7 @@ Disini kita akan melakukan request dengan menggunakan javascript fetch.
 * Pilih Event Data : Raw REquest, HTTP Response : 200 OK . Kemudian klik Save and Continue
   ![image](https://user-images.githubusercontent.com/11188109/220201352-08e86d50-0b57-4bb9-98f5-b6ff3d09d420.png)
 * Akan keluar unique URL untuk endpoint : https://eol0j1lmdtbpzp.m.pipedream.net . Kemudian kita coba dengan postman dahulu
-![image](https://user-images.githubusercontent.com/11188109/220201459-1d403095-0585-40d3-b478-e33d0d510ce2.png)
+  ![image](https://user-images.githubusercontent.com/11188109/220201459-1d403095-0585-40d3-b478-e33d0d510ce2.png)
 
 ### Melakukan Testing Endpoint
 
@@ -85,22 +85,74 @@ Disini kita akan membuka Postman untuk melakukan testing endpoint dahulu, dengan
   ```
 
 
-### Membangun Aplikasi Pendaftaran
+### Membuat Form Pendaftaran
 
 * Kita cari dulu di google dengan keyword sign up form tailwind component free. Contoh : https://tailwindcomponents.com/component/simple-registersign-up-form/landing
   ![image](https://user-images.githubusercontent.com/11188109/220203961-34229f29-9cce-4352-b158-bcf7ad55b6bc.png)
-* Kita unduk kodenya untuk kita pakai ditaruh di repo kita dan coba kita live server dari vscode
+* Kita unduk kodenya untuk kita pakai ditaruh di repo kita dan coba kita live server dari vscode.
+  ![image](https://user-images.githubusercontent.com/11188109/220204497-5616ba02-aa69-4126-bec0-6dba44c676be.png)
+  ![image](https://user-images.githubusercontent.com/11188109/220204556-19245b9f-6f50-47fb-a29c-700e17196bf9.png)
+* Cari element dari input dan buttonnya kemudian kita beri id
+  ![image](https://user-images.githubusercontent.com/11188109/220205296-cdc9453b-58dd-4727-9d77-c5c250d3bb00.png) 
+  ![image](https://user-images.githubusercontent.com/11188109/220205510-205c1381-073b-451f-b29c-ede13072c333.png)
+* Buat file js kita masukkan dahulu javascript yang didapatkan dari postman ke js tersebut, kemudian panggil pada bagian bawah sebelum tag penutup body
+
+  ![image](https://user-images.githubusercontent.com/11188109/220205858-d311831a-d9d6-4cad-b8ea-94dca460121c.png)
+  ```html
+  <script src="croot.js"></script>
+  ```
 
 
+### Membuat Fungsi Javascript
 
+Pada bagian ini kita akan membuat fungsi-fungsi di javascript untuk mengirimkan data dari html menuju endpoint pipedream yang kita buat. Kenapa harus dibuat fungsi? agar kode program javascript tetap rapih dan mudah terbaca.
+1. Membuat fungsi PostSignUp() yang berfungsi untuk melakukan Post Form Data Sign Up. Fungsi ini diambil dari postman, yang kita modif data inputan dari id form html.
+   ```javascript
+    function PostSignUp(namadepan,namabelakang,email,password){
+    var myHeaders = new Headers();
+    myHeaders.append("Login", "rollygantengsekali");
+    myHeaders.append("Content-Type", "application/json");
 
+    var raw = JSON.stringify({
+    "namadepan": namadepan,
+    "namabelakang": namabelakang,
+    "email": email,
+    "password": password
+    });
 
+    var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+    };
 
+    fetch("https://eol0j1lmdtbpzp.m.pipedream.net", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+    }
+   ```
+3. Membuat fungsi PushButton() untuk melakukan aksi setelah menekan tombol, pada bagian html button tambahkan atribut onclick.
 
-
+   ![image](https://user-images.githubusercontent.com/11188109/220208507-0d5cb2cc-4979-410c-a3e0-a804caa732c4.png)
+   ```javascript
+    function PushButton(){
+    namadepan=document.getElementById("namadepan").value;
+    namabelakang=document.getElementById("namabelakang").value;
+    email=document.getElementById("email").value;
+    password=document.getElementById("password").value;
+    PostSignUp(namadepan,namabelakang,email,password);
+    }
+   ```
+4. Kita test dengan klik kanan Open with live server, kita isi form nya sambil inspect console lalu klik button yang kita buat. Terlihat dari console data success dikirim. kemudian kita lihat pada dashboard pipedream data sudah diterima dengan baik oleh endpoint baik itu header maupun body.
+   ![image](https://user-images.githubusercontent.com/11188109/220209051-34a4982b-9a50-4e7f-8283-760948abfc15.png)
+   ![image](https://user-images.githubusercontent.com/11188109/220209136-5e2ec6fa-12c0-450f-b417-91b50cd4110a.png)
+   ![image](https://user-images.githubusercontent.com/11188109/220209218-73348bb6-6d29-47f5-8988-675b6c85eac0.png)
 
 
   
+
 
 
 
