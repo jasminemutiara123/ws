@@ -9,6 +9,7 @@
   ![image](https://user-images.githubusercontent.com/11188109/220023734-cf442863-7ec4-40eb-abfc-4058f0ca8380.png)
 * Setting Repo untuk Github Pages
   ![image](https://user-images.githubusercontent.com/11188109/220018093-6ac9f3ea-af03-47b9-a038-76a2f5a295a2.png)
+* Ingat selalu inspect console untuk melihat error javascript, jika terjadi error CORS Police, maka ganti ke pipedream.com
   
 ## Setting Endpoint di Pipedream
 
@@ -170,18 +171,14 @@ Pasti merasa aneh bukan setelah menekan tombol, tapi tampilan tidak berubah sama
     }
   ```
   ![image](https://user-images.githubusercontent.com/11188109/220211123-eb372a58-7507-4bd8-b54f-2f18f50d5dd9.png)
+* Kita ujicoba dengan mengisi form dan klik tombol submit, maka form kita sudah berhasil.
+  ![image](https://user-images.githubusercontent.com/11188109/220211272-70eaa594-504c-40f9-9b96-633bf9f9e676.png)
 
 
+## Tugas
 
-  
-
-
-
-
-## Pre Test
-
-* Buatlah form dan button yang berisi sign up biodata(minimal 5 field) yang melakukan POST ke requestcatcher.com atau webhook.site atau pipedream.com ketika klik button
-* Ingat selalu inspect console untuk melihat error javascript, jika terjadi error CORS Police, maka ganti ke pipedream.com
+* Buatlah form sign up yang melakukan POST ke pipedream.com ketika klik button.
+* 
 * CSS menggunakan tailwind componen
 * Pull Request dengan nama 2-Kelas-NPM-NAMA di folder Chapter02/A/NPM
 * Sertakan skrinsutan dari requestcatcher.com atau webhook.site atau pipedream.com
