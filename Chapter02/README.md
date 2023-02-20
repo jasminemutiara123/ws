@@ -45,7 +45,7 @@ Disini kita akan melakukan request dengan menggunakan javascript fetch.
 * Pilih Event Data : Raw REquest, HTTP Response : 200 OK . Kemudian klik Save and Continue
   ![image](https://user-images.githubusercontent.com/11188109/220201352-08e86d50-0b57-4bb9-98f5-b6ff3d09d420.png)
 * Akan keluar unique URL untuk endpoint : https://eol0j1lmdtbpzp.m.pipedream.net . Kemudian kita coba dengan postman dahulu
-![image](https://user-images.githubusercontent.com/11188109/220201459-1d403095-0585-40d3-b478-e33d0d510ce2.png)
+  ![image](https://user-images.githubusercontent.com/11188109/220201459-1d403095-0585-40d3-b478-e33d0d510ce2.png)
 
 ### Melakukan Testing Endpoint
 
@@ -85,7 +85,7 @@ Disini kita akan membuka Postman untuk melakukan testing endpoint dahulu, dengan
   ```
 
 
-### Membangun Aplikasi Pendaftaran
+### Membuat Form Pendaftaran
 
 * Kita cari dulu di google dengan keyword sign up form tailwind component free. Contoh : https://tailwindcomponents.com/component/simple-registersign-up-form/landing
   ![image](https://user-images.githubusercontent.com/11188109/220203961-34229f29-9cce-4352-b158-bcf7ad55b6bc.png)
@@ -96,13 +96,44 @@ Disini kita akan membuka Postman untuk melakukan testing endpoint dahulu, dengan
   ![image](https://user-images.githubusercontent.com/11188109/220205296-cdc9453b-58dd-4727-9d77-c5c250d3bb00.png) 
   ![image](https://user-images.githubusercontent.com/11188109/220205510-205c1381-073b-451f-b29c-ede13072c333.png)
 * Buat file js kita masukkan dahulu javascript yang didapatkan dari postman ke js tersebut, kemudian panggil pada bagian bawah sebelum tag penutup body
+
   ![image](https://user-images.githubusercontent.com/11188109/220205858-d311831a-d9d6-4cad-b8ea-94dca460121c.png)
   ```html
   <script src="croot.js"></script>
   ```
-* 
 
 
+### Membuat Fungsi Javascript
+
+Pada bagian ini kita akan membuat fungsi-fungsi di javascript. Kenapa harus dibuat fungsi? agar kode program javascript tetap rapih dan mudah terbaca.
+1. Fungsi PostSignUp() yang berfungsi untuk melakukan Post Form Data Sign Up. Fungsi ini diambil dari postman.
+   ```javascript
+   function PostSignUp(){
+    var myHeaders = new Headers();
+    myHeaders.append("Login", "rollygantengsekali");
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+    "uuid": "sadsadsad",
+    "phonenumber": "6281312000300",
+    "delay": 1
+    });
+
+    var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+    };
+
+    fetch("https://eol0j1lmdtbpzp.m.pipedream.net", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+   }
+   ```
+3. sdfds
+4. sdfdsf
 
 
 
