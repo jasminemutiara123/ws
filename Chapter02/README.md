@@ -150,7 +150,11 @@ Pada bagian ini kita akan membuat fungsi-fungsi di javascript untuk mengirimkan 
    ![image](https://user-images.githubusercontent.com/11188109/220209136-5e2ec6fa-12c0-450f-b417-91b50cd4110a.png)
    ![image](https://user-images.githubusercontent.com/11188109/220209218-73348bb6-6d29-47f5-8988-675b6c85eac0.png)
 
+### Tambahan Estetika UX
 
+Pasti merasa aneh bukan setelah menekan tombol, tapi tampilan tidak berubah sama sekali seolah tidak terjadi apa-apa. Disini kita akan coba untuk mengubah tampilan jika tombol di klik, maka form akan disembunyikan dan menampilkan data yang diterima dari endpoint pipedream. Oke kita cuku menambahkan satu fungsi lagi dan memodifikasi fungsi PostSignUp() khususnya dibagian result then fetch nya. Langkahnya sebagai berikut :
+
+* Buat desain yang berbeda
   
 
 
