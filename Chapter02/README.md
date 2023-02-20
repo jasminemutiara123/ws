@@ -23,7 +23,7 @@ Disini kita akan melakukan request dengan menggunakan javascript fetch.
 
 ### Membuat Akun
 
-* Kunjungi pipedream.com , terus klik Sign Up Free!
+* Kunjungi pipedream.com , terus klik Sign Up Free! 
   ![image](https://user-images.githubusercontent.com/11188109/220200037-5f556ae6-3bd6-4aa3-9869-00c1d119bb51.png)
 * Klik sign up with github
   ![image](https://user-images.githubusercontent.com/11188109/220200140-783f1a04-e00b-425b-a5b2-b43f546b022c.png)
