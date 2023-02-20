@@ -19,6 +19,7 @@ Pipedream merupakan endpoint testing API, untuk membaca header dan body(raw mess
 3. Membangun HTML Form dengan Tailwind CSS Component
 4. Membuat file js untuk mengirimkan data form ke endpoint pipedream
 5. Melihat hasilnya di dashboard pipedream
+6. Testing menggunakan github pages
 
 Disini kita akan melakukan request dengan menggunakan javascript fetch.
 
