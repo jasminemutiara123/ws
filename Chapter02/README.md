@@ -29,4 +29,4 @@ Ambil sertifikasi :
 * https://www.codecademy.com/learn/learn-go
 * https://www.coursera.org/specializations/google-golang
 
-Buat Package golang
+lampirkan pada saat pull request
