@@ -18,3 +18,9 @@
 * Pull Request dengan nama 2-Kelas-NPM-NAMA di folder Chapter02/A/NPM
 * Sertakan skrinsutan dari requestcatcher.com atau webhook.site atau pipedream.com
 * Github Pages Sudah jalan di repo masing-masing
+* Nama file html wajib diberi nama index.html
+
+
+## Tugas
+
+* Ambil sertifikasi https://www.mygreatlearning.com/academy/learn-for-free/courses/go-programming-language
