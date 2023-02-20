@@ -51,34 +51,38 @@ Disini kita akan melakukan request dengan menggunakan javascript fetch.
 
 Disini kita akan membuka Postman untuk melakukan testing endpoint dahulu, dengan contoh :
 * Method POST Headers kita isi dengan Key : Login , Value : Bebas. Pada bagian body isi dengan data json .Kemudian klik Send
-![image](https://user-images.githubusercontent.com/11188109/220201693-d5189d91-116b-42cf-9632-b553822a0327.png)
-![image](https://user-images.githubusercontent.com/11188109/220202209-9bc7b8d0-2483-423e-8b80-da10be5bba50.png)
+  ![image](https://user-images.githubusercontent.com/11188109/220201693-d5189d91-116b-42cf-9632-b553822a0327.png)
+  ![image](https://user-images.githubusercontent.com/11188109/220203247-7803df47-029c-4bd9-9233-ef2540d9bca7.png)
 * Dashboard Pipedream akan muncul 1 New Event, kita buka event tersebut.
-![image](https://user-images.githubusercontent.com/11188109/220201839-cf090239-88eb-4506-8d4c-a0e57b68b4f6.png)
-![image](https://user-images.githubusercontent.com/11188109/220201921-6e223896-90cf-4442-b242-7eba8b433aab.png)
+  ![image](https://user-images.githubusercontent.com/11188109/220201839-cf090239-88eb-4506-8d4c-a0e57b68b4f6.png)
+  ![image](https://user-images.githubusercontent.com/11188109/220201921-6e223896-90cf-4442-b242-7eba8b433aab.png)
 * Disana akan terlihat pada bagian headers ada Login yang kita masukkan dan pada bagian body ada json yang kita masukkan ke postman. Artinya endpoint dan http request bekerja dengan baik untuk menangkap header dan body yang dikirimkan.
   ![image](https://user-images.githubusercontent.com/11188109/220202117-9ab13390-2fd6-4be2-9020-a2bba9c8f7e4.png)
 * Simpan kode javascript yang dibuat oleh postman dengan menekan tanda </> dibagian pojok kanan atas, kemudian pilih javascipt - Fetch
-![image](https://user-images.githubusercontent.com/11188109/220202673-ddf58908-ef14-44ad-8e32-d39d6b80be8e.png)
-```javascript
-var myHeaders = new Headers();
-myHeaders.append("Login", "rollygantengsekali");
-myHeaders.append("Content-Type", "text/plain");
+  ![image](https://user-images.githubusercontent.com/11188109/220203396-5b64b9f1-b0a9-41b4-853e-6de1addb0767.png)
+  ```javascript
+  var myHeaders = new Headers();
+  myHeaders.append("Login", "rollygantengsekali");
+  myHeaders.append("Content-Type", "application/json");
 
-var raw = "{\r\n    \"uuid\" : \"sadsadsad\",\r\n    \"phonenumber\" : \"6281312000300\",\r\n    \"delay\" :1\r\n}";
+  var raw = JSON.stringify({
+    "uuid": "sadsadsad",
+    "phonenumber": "6281312000300",
+    "delay": 1
+  });
 
-var requestOptions = {
-  method: 'POST',
-  headers: myHeaders,
-  body: raw,
-  redirect: 'follow'
-};
+  var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+  };
 
-fetch("https://eol0j1lmdtbpzp.m.pipedream.net", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
-```
+  fetch("https://eol0j1lmdtbpzp.m.pipedream.net", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+  ```
 
 
 ### Membangun Aplikasi Pendaftaran
