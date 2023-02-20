@@ -28,3 +28,13 @@ Golang Fiber Framework
 | 1214061   | NIZAR.ABDUL.KHOLIQ | 100 |
 | 1214076   | Ryaas Ishlah Ramadhan | 100 |
 | 1214086   | Mochammad Iqbal Ramadhan | 100 |
+
+## Daftar Hitam Mahasiswa Hutang
+
+![image](https://user-images.githubusercontent.com/11188109/220054134-7d78b3d4-e7b5-4eec-a3c7-271853d1319d.png)
+![image](https://user-images.githubusercontent.com/11188109/220054249-df192e53-a58a-4e35-8a77-3ec8dddb12f5.png)
+![image](https://user-images.githubusercontent.com/11188109/220054328-5b9c4e8b-5a64-483c-9f53-66325c568c47.png)
+![image](https://user-images.githubusercontent.com/11188109/220054380-de60fe89-0460-4981-b134-6c5a922975b1.png)
+
+
+
