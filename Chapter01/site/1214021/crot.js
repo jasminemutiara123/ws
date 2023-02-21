@@ -35,3 +35,4 @@ function isiintabelnya(value){
     return txt
 
 }
+
