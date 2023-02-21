@@ -110,16 +110,12 @@ install plugin live server
 ## Tugas
 
 1. Buat folder NPM di dalam folder site di dalam folder chapter01. Pilih Public API
-
-2. Ada dua file yang dibuat yaitu index.html dan croot.js. Men
-
+2. Ada dua file yang dibuat yaitu dengan nama index.html dan croot.js. Boleh menambahkan file css
 3. Buat html bisa membaca semua data dari API, pastikan setiap orang berbeda, tidak boleh sama API nya.
     ![image](https://user-images.githubusercontent.com/11188109/218429415-dc895212-8982-4d73-9010-32cf5e72906f.png)
-
 4. Pull Request Dengan Subjek : 1-KELAS-NPM-NAMA , 
-5. Description : please include your screenshoot of your application and attach your javascript certificate.
+5. Isi Deskripsi : Tambahkan skrinsut javascript certificate.
     * Take course from [mygreatlearning](https://www.mygreatlearning.com/academy/learn-for-free/courses/introduction-to-javascript) or from [LinkedIn](https://www.linkedin.com/learning/javascript-for-web-designers-3)
     * Take Javascript Learning from [Google](https://learndigital.withgoogle.com/digitalgarage/course/learn-programming-with-javascript) for next class meeting.
-6. After Approved you might go home
-
+6. Pastikan akses API hanya menggunakan protokol https
 
