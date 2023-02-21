@@ -21,6 +21,7 @@ Materi Kuliah Web Service, akses github pages : https://universitas.bukupedia.co
 | 1214020   | Farhan Rizki M | 100 |
 | 1214022   | Gilar Wahibul Azhar | 100 |
 | 1214024   | Farhan Riziq | 50 |
+| 1214027   | Gabriella Youzanna Rorong | 100 |
 | 1214030   | Fahad Abdul Aziz | 100 |
 | 1214033   | Isnaenti Nur Latifah | 50 |
 | 1214041   | Muhammad Faisal Ashshidiq | 50 |
@@ -28,6 +29,7 @@ Materi Kuliah Web Service, akses github pages : https://universitas.bukupedia.co
 | 1214061   | NIZAR.ABDUL.KHOLIQ | 100 |
 | 1214076   | Ryaas Ishlah Ramadhan | 100 |
 | 1214086   | Mochammad Iqbal Ramadhan | 100 |
+
 
 ## Daftar Hitam Mahasiswa Hutang
 
