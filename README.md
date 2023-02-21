@@ -42,6 +42,7 @@ Pelaku delete file orang :
 ## Daftar Hitam Mahasiswa Hutang Buku
 
 |No.| Nama      | Judul | Katalog |
+| ------ | ------ | ------ | ------ |
 | 1. | Ghifar Damara,Haris Riyoni | TUTORIAL GIT DAN HOSTING PHP MYSQL | https://katalog.bukupedia.co.id/2022/09/tutorial-git-dan-hosting-php-mysql.html |
 | 2. | Moch Arifqi Ramadhan,Roni Andarsyah | KLASIFIKASI TEXT SPAM MENGGUNAKAN METODE SUPPORT VECTOR MACHINE DAN NAÏVE BAYES  | https://katalog.bukupedia.co.id/2022/09/klasifikasi-text-spam-menggunakan.html |
 | 3. | Ferdy Berliano Putra,Syafrial Fachri Pane,Roni Habibi | ANALISIS KLASIFIKASI UNTUK MENGETAHUI KETERCAPAIAN VAKSINASI DI ERA PANDEMI COVID-19 MENGGUNAKAN MACHINE LEARNING | https://katalog.bukupedia.co.id/2022/09/analisis-klasifikasi-untuk-mengetahui.html |
