@@ -116,23 +116,23 @@ Pada bagian ini kita akan membuat fungsi-fungsi di javascript untuk mengirimkan 
           myHeaders.append("Content-Type", "application/json");
 
           var raw = JSON.stringify({
-          "namadepan": namadepan,
-          "namabelakang": namabelakang,
-          "email": email,
-          "password": password
+              "namadepan": namadepan,
+              "namabelakang": namabelakang,
+              "email": email,
+              "password": password
           });
 
           var requestOptions = {
-          method: 'POST',
-          headers: myHeaders,
-          body: raw,
-          redirect: 'follow'
+              method: 'POST',
+              headers: myHeaders,
+              body: raw,
+              redirect: 'follow'
           };
 
           fetch("https://eol0j1lmdtbpzp.m.pipedream.net", requestOptions)
-          .then(response => response.text())
-          .then(result => console.log(result))
-          .catch(error => console.log('error', error));
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
     }
    ```
 3. Membuat fungsi PushButton() untuk melakukan aksi setelah menekan tombol, pada bagian html button tambahkan atribut onclick.
