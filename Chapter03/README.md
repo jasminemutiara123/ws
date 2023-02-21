@@ -26,6 +26,25 @@ Komunikasi di golang menggunakan json dipermudah dengan adanya struct type. Stru
 
 Kita akan melakukkan
 
+## Testing Packace
+
+```go
+package autoiteung
+
+import (
+	"fmt"
+	"testing"
+)
+
+func TestBukaKelas(t *testing.T) {
+	nama_group := "21666-2A-PEMOGRAMAN III | TYGUSAD"
+	pesaniteung := BukaKelas(nama_group)
+	fmt.Println(pesaniteung)
+
+}
+
+```
+
 ## Publish
 GOPROXY=proxy.golang.org
 
