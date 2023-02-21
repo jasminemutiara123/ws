@@ -18,7 +18,11 @@ Disini dipelajari bagaimana membuat package dan menggunakan environment variabel
    go mod tidy
    go run .
    ```
-## Membuat fungsi di golang
+## Struct di golang
+
+Kita akan melakukkan
+
+## Fungsi di golang
 
 Kita akan melakukkan
 
