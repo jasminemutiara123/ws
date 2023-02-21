@@ -174,7 +174,7 @@ Pasti merasa aneh bukan setelah menekan tombol, tapi tampilan tidak berubah sama
   ![image](https://user-images.githubusercontent.com/11188109/220211123-eb372a58-7507-4bd8-b54f-2f18f50d5dd9.png)
 * Kita ujicoba dengan mengisi form dan klik tombol submit, maka form kita sudah berhasil.
   ![image](https://user-images.githubusercontent.com/11188109/220211272-70eaa594-504c-40f9-9b96-633bf9f9e676.png)
-* Setting pages pilih deployment from branch pilih main. Maka form kita bisa diakses dari menjadi github pages. Contoh akses github pages : https://universitas.bukupedia.co.id/ws/Chapter02/A/NPM/
+* Setting pages pilih deployment from branch pilih main. Maka form kita bisa diakses dari menjadi github pages. Alamat github pages biasanya sub domain dari github.io. Kita juga bisa menggunakan custom domain kita sendiri, Contoh : https://universitas.bukupedia.co.id/ws/Chapter02/A/NPM/
 
 ## Tugas
 
