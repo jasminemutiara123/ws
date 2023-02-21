@@ -15,7 +15,7 @@ Materi Kuliah Web Service, akses github pages : https://universitas.bukupedia.co
 | 1214005   | Muhammad Rafi Al Azhim | 100 |
 | 1214007   | Ratu SukmaKomala | 50 |
 | 1214008   | Muhammad Syahid Al Fajri | 100 |
-| 1214010   | shahiezaalfadiashauqie | 100 |
+| 1214010   | shahiezaalfadiashauqie | 0 |
 | 1214012   | Jasmine Mutiara Bintang | 0 |
 | 1214017   | Rofi Nafiis Zain | 100 |
 | 1214020   | Farhan Rizki M | 100 |
@@ -30,6 +30,13 @@ Materi Kuliah Web Service, akses github pages : https://universitas.bukupedia.co
 | 1214076   | Ryaas Ishlah Ramadhan | 100 |
 | 1214086   | Mochammad Iqbal Ramadhan | 100 |
 
+## Pelakor
+
+Pelaku delete file orang :
+|No.| NPM      | Nama | Commit |
+|1.| 1214018 | Hilal Dzakwan | https://github.com/bukped/ws/commit/41b5b0a1c18ecea40e70c4eaab8fb8d49262c2e3 |
+|2.| 1214018 | Hilal Dzakwan | https://github.com/bukped/ws/commit/4dceb173dbbe8f080543dac9f94867b0db41e603 |
+|3.| 1214010 | Hilal Dzakwan | shahiezaalfadiashauqie | https://github.com/bukped/ws/commit/cbe7f3e5091f6b0ad37bffd18f8532ce5543d024 |
 
 ## Daftar Hitam Mahasiswa Hutang
 
