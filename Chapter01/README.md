@@ -61,7 +61,7 @@ install plugin live server
 
 1. Buat folder NPM di dalam folder site
 2. Buat template tailwindcss simpan sebagai index.html
-3. buat file js dengan nama croot.js panggil di bawah dengan script, sebelum tag </body>
+3. buat file js dengan nama croot.js panggil di bawah dengan script, sebelum tag penutup body
     ```html
     <script src="./croot.js"></script>
     ```
