@@ -111,28 +111,28 @@ Pada bagian ini kita akan membuat fungsi-fungsi di javascript untuk mengirimkan 
 1. Membuat fungsi PostSignUp() yang berfungsi untuk melakukan Post Form Data Sign Up. Fungsi ini diambil dari postman, yang kita modif data inputan dari id form html.
    ```javascript
     function PostSignUp(namadepan,namabelakang,email,password){
-    var myHeaders = new Headers();
-    myHeaders.append("Login", "rollygantengsekali");
-    myHeaders.append("Content-Type", "application/json");
+          var myHeaders = new Headers();
+          myHeaders.append("Login", "rollygantengsekali");
+          myHeaders.append("Content-Type", "application/json");
 
-    var raw = JSON.stringify({
-    "namadepan": namadepan,
-    "namabelakang": namabelakang,
-    "email": email,
-    "password": password
-    });
+          var raw = JSON.stringify({
+          "namadepan": namadepan,
+          "namabelakang": namabelakang,
+          "email": email,
+          "password": password
+          });
 
-    var requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: raw,
-    redirect: 'follow'
-    };
+          var requestOptions = {
+          method: 'POST',
+          headers: myHeaders,
+          body: raw,
+          redirect: 'follow'
+          };
 
-    fetch("https://eol0j1lmdtbpzp.m.pipedream.net", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+          fetch("https://eol0j1lmdtbpzp.m.pipedream.net", requestOptions)
+          .then(response => response.text())
+          .then(result => console.log(result))
+          .catch(error => console.log('error', error));
     }
    ```
 3. Membuat fungsi PushButton() untuk melakukan aksi setelah menekan tombol, pada bagian html button tambahkan atribut onclick.
@@ -140,11 +140,11 @@ Pada bagian ini kita akan membuat fungsi-fungsi di javascript untuk mengirimkan 
    ![image](https://user-images.githubusercontent.com/11188109/220208507-0d5cb2cc-4979-410c-a3e0-a804caa732c4.png)
    ```javascript
     function PushButton(){
-    namadepan=document.getElementById("namadepan").value;
-    namabelakang=document.getElementById("namabelakang").value;
-    email=document.getElementById("email").value;
-    password=document.getElementById("password").value;
-    PostSignUp(namadepan,namabelakang,email,password);
+          namadepan=document.getElementById("namadepan").value;
+          namabelakang=document.getElementById("namabelakang").value;
+          email=document.getElementById("email").value;
+          password=document.getElementById("password").value;
+          PostSignUp(namadepan,namabelakang,email,password);
     }
    ```
 4. Kita test dengan klik kanan Open with live server, kita isi form nya sambil inspect console lalu klik button yang kita buat. Terlihat dari console data success dikirim. kemudian kita lihat pada dashboard pipedream data sudah diterima dengan baik oleh endpoint baik itu header maupun body.
@@ -168,7 +168,7 @@ Pasti merasa aneh bukan setelah menekan tombol, tapi tampilan tidak berubah sama
 * Tambahkan fungsi GetResponse() di file js kita yang sudah dibuat sebelumnya, dan melakukan modifikasi dari fungsi PostSignUp pada bagian then result.
   ```javascript
     function GetResponse(result){
-    document.getElementById("formsignup").innerHTML = result;
+          document.getElementById("formsignup").innerHTML = result;
     }
   ```
   ![image](https://user-images.githubusercontent.com/11188109/220211123-eb372a58-7507-4bd8-b54f-2f18f50d5dd9.png)
