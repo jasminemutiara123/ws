@@ -176,7 +176,7 @@ Pasti merasa aneh bukan setelah menekan tombol, tapi tampilan tidak berubah sama
   ![image](https://user-images.githubusercontent.com/11188109/220211272-70eaa594-504c-40f9-9b96-633bf9f9e676.png)
 * Setting pages pilih deployment from branch pilih main. Maka form kita bisa diakses dari menjadi github pages. Alamat github pages biasanya sub domain dari github.io. Kita juga bisa menggunakan custom domain kita sendiri, Contoh : https://universitas.bukupedia.co.id/ws/Chapter02/A/NPM/
 
-## Tugas
+## Kerjakan
 
 * Buatlah form sign up yang melakukan POST ke pipedream.com ketika klik button.
 * Buat Folder NPM didalam Chapter02/A yang berisi 2 file minimal js dan html, dengan nama index.html, croot.js. Boleh menambahkan file css atau favicon.
