@@ -20,7 +20,7 @@ Disini dipelajari bagaimana membuat package dan menggunakan environment variabel
    ```
 ## Struct di golang
 
-Kita akan melakukkan
+Komunikasi di golang menggunakan json dipermudah dengan adanya struct type. Struct type ini akan mendefinisikan bagaimana bentuk json yang berkomunikasi dari frontend menuju backend.
 
 ## Fungsi di golang
 
