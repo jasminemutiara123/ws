@@ -1,9 +1,26 @@
-# Package
+# Golang Package and Environment
 
+Disini dipelajari bagaimana membuat package dan menggunakan environment variabel di golang. Pastikan :
+1. Download dan Install golang
+2. Membuat dan menjalankan aplikasi hello word
+   Buat file main.go yang berisi
+   ```go
+   package main
 
-go mod init wasocket
+   import "fmt"
 
-go mod tidy
+   func main() {
+        fmt.Println("Hello, World!")
+   }
+   ```
+   ```sh
+   go mod init hello
+   go mod tidy
+   go run .
+   ```
+## Membuat fungsi di golang
+
+Kita akan melakukkan
 
 ## Publish
 GOPROXY=proxy.golang.org
