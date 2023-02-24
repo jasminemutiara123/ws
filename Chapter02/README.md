@@ -1,4 +1,4 @@
-# HTTP Header Barrier
+# HTTP Header and Body Capture
 
 ## Syarat Umum
 
@@ -9,6 +9,7 @@
   ![image](https://user-images.githubusercontent.com/11188109/220023734-cf442863-7ec4-40eb-abfc-4058f0ca8380.png)
 * Setting Repo untuk Github Pages
   ![image](https://user-images.githubusercontent.com/11188109/220018093-6ac9f3ea-af03-47b9-a038-76a2f5a295a2.png)
+* Ingat selalu inspect console untuk melihat error javascript, jika terjadi error CORS Police, maka ganti ke pipedream.com
   
 ## Setting Endpoint di Pipedream
 
@@ -18,6 +19,7 @@ Pipedream merupakan endpoint testing API, untuk membaca header dan body(raw mess
 3. Membangun HTML Form dengan Tailwind CSS Component
 4. Membuat file js untuk mengirimkan data form ke endpoint pipedream
 5. Melihat hasilnya di dashboard pipedream
+6. Production mode menggunakan github pages
 
 Disini kita akan melakukan request dengan menggunakan javascript fetch.
 
@@ -89,7 +91,7 @@ Disini kita akan membuka Postman untuk melakukan testing endpoint dahulu, dengan
 
 * Kita cari dulu di google dengan keyword sign up form tailwind component free. Contoh : https://tailwindcomponents.com/component/simple-registersign-up-form/landing
   ![image](https://user-images.githubusercontent.com/11188109/220203961-34229f29-9cce-4352-b158-bcf7ad55b6bc.png)
-* Kita unduk kodenya untuk kita pakai ditaruh di repo kita dan coba kita live server dari vscode.
+* Kita unduh kodenya untuk kita pakai ditaruh di repo kita dan coba kita live server dari vscode.
   ![image](https://user-images.githubusercontent.com/11188109/220204497-5616ba02-aa69-4126-bec0-6dba44c676be.png)
   ![image](https://user-images.githubusercontent.com/11188109/220204556-19245b9f-6f50-47fb-a29c-700e17196bf9.png)
 * Cari element dari input dan buttonnya kemudian kita beri id
@@ -105,57 +107,89 @@ Disini kita akan membuka Postman untuk melakukan testing endpoint dahulu, dengan
 
 ### Membuat Fungsi Javascript
 
-Pada bagian ini kita akan membuat fungsi-fungsi di javascript. Kenapa harus dibuat fungsi? agar kode program javascript tetap rapih dan mudah terbaca.
-1. Fungsi PostSignUp() yang berfungsi untuk melakukan Post Form Data Sign Up. Fungsi ini diambil dari postman, yang kita modif data inputan dari id form html.
+Pada bagian ini kita akan membuat fungsi-fungsi di javascript untuk mengirimkan data dari html menuju endpoint pipedream yang kita buat. Kenapa harus dibuat fungsi? agar kode program javascript tetap rapih dan mudah terbaca.
+1. Membuat fungsi PostSignUp() yang berfungsi untuk melakukan Post Form Data Sign Up. Fungsi ini diambil dari postman, yang kita modif data inputan dari id form html.
    ```javascript
     function PostSignUp(namadepan,namabelakang,email,password){
-    var myHeaders = new Headers();
-    myHeaders.append("Login", "rollygantengsekali");
-    myHeaders.append("Content-Type", "application/json");
+          var myHeaders = new Headers();
+          myHeaders.append("Login", "rollygantengsekali");
+          myHeaders.append("Content-Type", "application/json");
 
-    var raw = JSON.stringify({
-    "namadepan": namadepan,
-    "namabelakang": namabelakang,
-    "email": email,
-    "password": password
-    });
+          var raw = JSON.stringify({
+              "namadepan": namadepan,
+              "namabelakang": namabelakang,
+              "email": email,
+              "password": password
+          });
 
-    var requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: raw,
-    redirect: 'follow'
-    };
+          var requestOptions = {
+              method: 'POST',
+              headers: myHeaders,
+              body: raw,
+              redirect: 'follow'
+          };
 
-    fetch("https://eol0j1lmdtbpzp.m.pipedream.net", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+          fetch("https://eol0j1lmdtbpzp.m.pipedream.net", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
     }
    ```
-3. sdfds
-4. sdfdsf
+3. Membuat fungsi PushButton() untuk melakukan aksi setelah menekan tombol, pada bagian html button tambahkan atribut onclick.
+
+   ![image](https://user-images.githubusercontent.com/11188109/220208507-0d5cb2cc-4979-410c-a3e0-a804caa732c4.png)
+   ```javascript
+    function PushButton(){
+          namadepan=document.getElementById("namadepan").value;
+          namabelakang=document.getElementById("namabelakang").value;
+          email=document.getElementById("email").value;
+          password=document.getElementById("password").value;
+          PostSignUp(namadepan,namabelakang,email,password);
+    }
+   ```
+4. Kita test dengan klik kanan Open with live server, kita isi form nya sambil inspect console lalu klik button yang kita buat. Terlihat dari console data success dikirim. kemudian kita lihat pada dashboard pipedream data sudah diterima dengan baik oleh endpoint baik itu header maupun body.
+   ![image](https://user-images.githubusercontent.com/11188109/220209051-34a4982b-9a50-4e7f-8283-760948abfc15.png)
+   ![image](https://user-images.githubusercontent.com/11188109/220209136-5e2ec6fa-12c0-450f-b417-91b50cd4110a.png)
+   ![image](https://user-images.githubusercontent.com/11188109/220209218-73348bb6-6d29-47f5-8988-675b6c85eac0.png)
+
+### Tambahan Estetika UX
+
+Pasti merasa aneh bukan setelah menekan tombol, tapi tampilan tidak berubah sama sekali seolah tidak terjadi apa-apa. Disini kita akan coba untuk mengubah tampilan jika tombol di klik, maka form akan disembunyikan dan menampilkan data yang diterima dari endpoint pipedream. Oke kita cukup menambahkan satu fungsi lagi dan memodifikasi fungsi PostSignUp() khususnya dibagian result then fetch nya. Langkahnya sebagai berikut :
+
+* Pertama kita cari dulu element yang akan kita hidden, bisa menggunakan inspect elemetns untuk identifikasinya, kemudian kita kasih id
+  ![image](https://user-images.githubusercontent.com/11188109/220210224-290cb494-de07-4eb4-b403-5c21204f3a7a.png)
+  ![image](https://user-images.githubusercontent.com/11188109/220210342-a81493b4-453b-4cd1-a526-3ca1092f6ebc.png)
+* Kita coba script style display pada bagian console dengan menggunakan id yang sudah kita buat, style display mana yang bisa menghilangkan formsignup apakah block atau none. Terlihat di gambar none bisa mengilangkan element formsignup, kita **mungkin** akan pakai script ini di fungsi kita yang akan datang. Dari sini kita paham bagaimana menyembunyikan element dengan js.
+  ![image](https://user-images.githubusercontent.com/11188109/220210618-3961fe64-a413-4320-86e7-cdfafe640c50.png)
+  ```javascript
+    document.getElementById("formsignup").style.display = 'none';
+    document.getElementById("formsignup").style.display = 'block';
+  ```
+* Tambahkan fungsi GetResponse() di file js kita yang sudah dibuat sebelumnya, dan melakukan modifikasi dari fungsi PostSignUp pada bagian then result.
+  ```javascript
+    function GetResponse(result){
+          document.getElementById("formsignup").innerHTML = result;
+    }
+  ```
+  ![image](https://user-images.githubusercontent.com/11188109/220211123-eb372a58-7507-4bd8-b54f-2f18f50d5dd9.png)
+* Kita ujicoba dengan mengisi form dan klik tombol submit, maka form kita sudah berhasil.
+  ![image](https://user-images.githubusercontent.com/11188109/220211272-70eaa594-504c-40f9-9b96-633bf9f9e676.png)
+* Setting pages pilih deployment from branch pilih main. Maka form kita bisa diakses dari menjadi github pages. Alamat github pages biasanya sub domain dari github.io. Kita juga bisa menggunakan custom domain kita sendiri, Contoh : https://universitas.bukupedia.co.id/ws/Chapter02/A/NPM/
+
+## Kerjakan
+
+* Buatlah form sign up yang melakukan POST ke pipedream.com ketika klik button.
+* Buat Folder NPM didalam Chapter02/A yang berisi 2 file minimal js dan html, dengan nama index.html, croot.js. Boleh menambahkan file css atau favicon.
+* file croot.js minimal berisi 3 fungsi, tidak boleh ada kode js diluar dari fungsi, semua harus masuk ke dalam fungsi js.
+* Form dibangun dengan menggunakan CSS tailwind, desain html tidak boleh sama, harus berbeda satu sama lain.
+* Pull Request dengan nama 2-Kelas-NPM-NAMA di folder Chapter02/A/NPM, dengan deskripsi disertakan di bawah ini.
+* Sertakan skrinsutan dari live server aplikasi dan pipedream.com
+* Sertakan link Github Pages Sudah jalan di repo masing-masing
+* Sertakan skinsutan juga sertifikat 4 sertifikasi berikut:
+  * https://www.mygreatlearning.com/academy/learn-for-free/courses/go-programming-language 
+  * https://www.mindluster.com/certificate/3394
+  * https://www.codecademy.com/learn/learn-go
+  * https://www.coursera.org/specializations/google-golang
 
 
 
-
-## Pre Test
-
-* Buatlah form dan button yang berisi sign up biodata(minimal 5 field) yang melakukan POST ke requestcatcher.com atau webhook.site atau pipedream.com ketika klik button
-* Ingat selalu inspect console untuk melihat error javascript, jika terjadi error CORS Police, maka ganti ke pipedream.com
-* CSS menggunakan tailwind componen
-* Pull Request dengan nama 2-Kelas-NPM-NAMA di folder Chapter02/A/NPM
-* Sertakan skrinsutan dari requestcatcher.com atau webhook.site atau pipedream.com
-* Github Pages Sudah jalan di repo masing-masing
-* Nama file html wajib diberi nama index.html
-
-
-## Tugas
-
-Ambil sertifikasi :
-* https://www.mygreatlearning.com/academy/learn-for-free/courses/go-programming-language 
-* https://www.mindluster.com/certificate/3394
-* https://www.codecademy.com/learn/learn-go
-* https://www.coursera.org/specializations/google-golang
-
-lampirkan pada saat pull request chapter ini, bisa di deskrimsi maupun komentar
