@@ -7,6 +7,7 @@
     const formData = new FormData(form);
     
     var myHeaders = new Headers();
+    myHeaders.append("Token", "rofiganteng");
     myHeaders.append("Content-Type", "application/json");
 
     var object = {};
@@ -14,20 +15,18 @@
         object;
         object[key] = value;
     });
-
+    
     var requestOptions = {
       method: 'POST',
       headers: myHeaders,
       body: JSON.stringify(object),
-      redirect: 'follow',
+      redirect: 'follow'
     };
-
-    console.log(requestOptions);
-  
-    fetch("https://eoeiygy3sjdmge3.m.pipedream.net", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+    
+    fetch("https://eo5eqycz367iyvh.m.pipedream.net", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
 
     document.getElementById('form').reset();
   })
