@@ -7,6 +7,7 @@ form.addEventListener('submit', (e) => {
 
   var myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/json');
+  myHeaders.append('token', 'qobel');
 
   var object = {};
   formData.forEach(function (value, key) {
