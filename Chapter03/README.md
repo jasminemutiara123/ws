@@ -98,7 +98,7 @@ import (
 
 type Karyawan struct {
 	ID           primitive.ObjectID `bson:"_id,omitempty" json:"_id,omitempty"`
-	Nama         string             `bson:"nama,omitempty json:"nama,omitempty"`
+	Nama         string             `bson:"nama,omitempty" json:"nama,omitempty"`
 	Phone_number string             `bson:"phone_number,omitempty" json:"phone_number,omitempty"`
 	Jabatan      string             `bson:"jabatan,omitempty" json:"jabatan,omitempty"`
 	Jam_kerja    []JamKerja         `bson:"jam_kerja,omitempty" json:"jam_kerja,omitempty"`
