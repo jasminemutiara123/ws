@@ -256,6 +256,8 @@ go test
 
 ### Publish Package
 
+https://youtu.be/XLh7-D9bnTE
+
 Setting dahulu environtment variabel di windows :
 GOPROXY=proxy.golang.org
 
