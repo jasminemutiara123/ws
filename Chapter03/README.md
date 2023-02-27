@@ -133,6 +133,11 @@ type Lokasi struct {
 	Kategori string             `bson:"kategori,omitempty" json:"kategori,omitempty"`
 }
 
+type Geometry struct {
+	Type        string      `json:"type" bson:"type"`
+	Coordinates interface{} `json:"coordinates" bson:"coordinates"`
+}
+
 ```
 
 Kompilasi dependensi dengan perintah
