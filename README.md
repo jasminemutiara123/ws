@@ -39,6 +39,8 @@ Pelaku delete file orang :
 |2.| 1214018 | Hilal Dzakwan | https://github.com/bukped/ws/commit/4dceb173dbbe8f080543dac9f94867b0db41e603 |
 |3.| 1214010 | shahiezaalfadiashauqie | https://github.com/bukped/ws/commit/cbe7f3e5091f6b0ad37bffd18f8532ce5543d024 |
 
+petunjuk ngonten : https://kampus.awangga.net/standar/standar-konten-bukupedia-university
+
 ## Daftar Hitam Mahasiswa Hutang Buku
 
 |No.| Nama      | Judul | Katalog |
