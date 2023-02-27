@@ -3,10 +3,11 @@ myHeaders.append("token", "2167bb35-70c9-4009-b5f6-91ce3854841b");
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
-  "login": "",
-  "Username": "",
-  "Password": "",
-  "Submit": ""
+  "first name": "",
+  "last name": "",
+  "email": "",
+  "password": "",
+  "phone number": ""
 });
 
 var requestOptions = {
