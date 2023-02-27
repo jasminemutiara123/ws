@@ -2,8 +2,9 @@
 
 Pada bagian ini dijelaskan bagaimana membangun otorisasi pada backend dan menggunakannya di frontend, beberapa langkah yang dilakukan :
 * Bagaimana server mengenali siapa kita?
-* membuat package golang
-* membuat front end dengan tailwind container
+* Membuat front end dengan tailwind container
+* Membuat database backend
+* membuat package golang dan merilisnya
 
 Pastikan github pages sudah jalan di repo masing-masing.
 
