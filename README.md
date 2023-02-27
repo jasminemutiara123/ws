@@ -4,6 +4,7 @@ Materi Kuliah Web Service, akses github pages : https://universitas.bukupedia.co
 ## URL Cek Tugas
 
 1. https://universitas.bukupedia.co.id/ws/Chapter01/site/1214001/
+2. https://universitas.bukupedia.co.id/ws/Chapter02/A/NPM/
 
 ## Daftar Nilai 
 
