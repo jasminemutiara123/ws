@@ -15,6 +15,9 @@ Server membutuhkan identifikasi dari browser bahwa yang mengakses adalah orang y
 * Sekarang mahasiswa coba buka browser pada komputer masing-masing, dan bukalah situs yang sama. Kemudian masukkan Name dan Value dari browser dosen. Disini dicontohkan PHPSESSID. Selah diinputkan. silahkan refresh website. Dan lihatlah apa yang terjadi
 * Cobalah dengan website kampus dilanjut dengan youtube dan gmail.
 
+## Membuat container berbasis tailwindcss
+
+CSS mendefinisikan wilayah untuk tata letak dengan nama container. Biasanya dibatasi dengan tag div.
 
 ## Golang Package and Environment
 
