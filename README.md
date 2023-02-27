@@ -16,6 +16,7 @@ Materi Kuliah Web Service, akses github pages : https://universitas.bukupedia.co
 | 1214007   | Ratu SukmaKomala | 100 |
 | 1214008   | Muhammad Syahid Al Fajri | 100 |
 | 1214010   | shahiezaalfadiashauqie | 100 |
+| 1214011   | Daslan Josua Valentino Siahaan | 50 |
 | 1214012   | Jasmine Mutiara Bintang | 100 |
 | 1214017   | Rofi Nafiis Zain | 100 |
 | 1214020   | Farhan Rizki M | 100 |
@@ -28,7 +29,7 @@ Materi Kuliah Web Service, akses github pages : https://universitas.bukupedia.co
 | 1214047   | Haris Riyoni | 100 |
 | 1214061   | NIZAR.ABDUL.KHOLIQ | 100 |
 | 1214076   | Ryaas Ishlah Ramadhan | 100 |
-| 1214086   | Mochammad Iqbal Ramadhan | 100 |
+
 
 ## Pelakor
 
@@ -37,7 +38,7 @@ Pelaku delete file orang :
 | ------ | ------ | ------ | ------ |
 |1.| 1214018 | Hilal Dzakwan | https://github.com/bukped/ws/commit/41b5b0a1c18ecea40e70c4eaab8fb8d49262c2e3 |
 |2.| 1214018 | Hilal Dzakwan | https://github.com/bukped/ws/commit/4dceb173dbbe8f080543dac9f94867b0db41e603 |
-|3.| 1214010 | Gabriela | Pull REquest hapus semua kerjaan teman|
+|3.| 1214010 | Gabriella | Pull REquest hapus semua kerjaan teman|
 
 petunjuk ngonten : https://kampus.awangga.net/standar/standar-konten-bukupedia-university
 
