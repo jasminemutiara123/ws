@@ -71,13 +71,30 @@ Dalam memilih basis data skala enterprise harus mengacu pada hasil survey [Gartn
 ## Pengembangan Backend
 
 Pada sesi ini pastikan anda sudah mendaftarkan diri ke heroku. Kemudian kita akan mencoba mengembangkan package golang. Langkah untuk membuat backend di golang :
+* Instalasi golang
 * Definisikan dahulu struct
 * Buatlah package dan fungsi menggunakan struct tersebut
 * Fungsi mengakses langsung database
 
 ### Struct di golang
 
-Komunikasi di golang menggunakan json dipermudah dengan adanya struct type. Struct type ini akan mendefinisikan bagaimana bentuk json yang berkomunikasi dari frontend menuju backend.
+Komunikasi di golang menggunakan json dipermudah dengan adanya struct type. Struct type ini akan mendefinisikan bagaimana bentuk json yang berkomunikasi dari frontend menuju backend. Sebelumnya inisiasi dulu package yang akan kita buat, masuk ke folder kerja kita dan lakukan inisialisasi package
+
+```sh
+go mod init github.com/USERNAME/ai/Chapter01/KELAS/NPM
+```
+
+Buat file type.go pada folder tersebut. Kemudian isilah dengan struct yang akan kita buat.
+
+```go
+package namapackage
+```
+
+Kompilasi dependensi dengan perintah
+
+```sh
+go mod tidy
+```
 
 ### Golang Package and Environment
 
