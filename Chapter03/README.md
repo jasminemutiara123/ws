@@ -25,6 +25,9 @@ CSS mendefinisikan wilayah untuk tata letak dengan nama container. Biasanya diba
 
 ![image](https://user-images.githubusercontent.com/11188109/221481502-a6590b6d-f039-4883-a0e5-7b1e6ff6f189.png)
 
+Tambahkan chart, resume dan tabel.
+
+![image](https://user-images.githubusercontent.com/11188109/221483647-a4836c01-d913-4c04-8c18-d44fafe9c135.png)
 
 
 ## Golang Package and Environment
