@@ -11,7 +11,7 @@ Server membutuhkan identifikasi dari browser bahwa yang mengakses adalah orang y
 
 * Dosen Membuka situs shuffle.dev dan login pada chrome. Kemudian klik kanan inspect, pilih tab Application. Kemudian pada bagian kiri pilih Storage -> Cookies -> alamat web yagn dikunjungi. maka akan terlihat Name(Key) dan Value disana. Struktur data Cookie : Name, Value, Domain, Path, Expires. dll. 
   ![image](https://user-images.githubusercontent.com/11188109/221475714-3b632155-031c-40ec-a859-d8a8dbedf373.png)
-* Dilihat dari gambar diatas ada Cookie bernama PHPSESSID. Cookie tersebut merupakan standar dari session PHP. Jadi apa itu session? Setelah user melakukan login. Server membuat kode hash dan disimpan sebagai file yang berisi informasi username dan role di folder tmp, kemudian kode hash tersebut diberikan kepada client melalui browser melalu Set-Header HTTP, berisi Name dan Value. Dimana Name adalah nama cookiesnya dan value adalah kode hash yang sebelumnya disimpan di server. Selama user menggunakan browser maka interaksi dengan server selalu menyertekan Cookie dalam setiap permintaannya sebagai header setiap request. Sehingga user akan dikenali sebagai username apa dan role nya apa.
+* Dilihat dari gambar diatas ada Cookie bernama PHPSESSID. Cookie tersebut merupakan standar dari session PHP. Jadi apa itu session? Setelah user melakukan login. Server membuat kode hash dan disimpan sebagai file yang berisi informasi username dan role di folder tmp, kemudian kode hash tersebut diberikan kepada client melalui browser melalu Set-Header HTTP, berisi Name dan Value. Dimana Name adalah nama cookiesnya dan value adalah kode hash yang sebelumnya disimpan di server. Selama user menggunakan browser maka interaksi dengan server selalu menyertakan Cookie dalam setiap permintaannya sebagai header setiap request. Sehingga user akan dikenali sebagai username apa dan role nya apa.
 * Sekarang mahasiswa coba buka browser pada komputer masing-masing, dan bukalah situs yang sama. Kemudian masukkan Name dan Value dari browser dosen. Disini dicontohkan PHPSESSID. Selah diinputkan. silahkan refresh website. Dan lihatlah apa yang terjadi
 * Cobalah dengan website kampus dilanjut dengan youtube dan gmail.
 
@@ -20,6 +20,10 @@ Server membutuhkan identifikasi dari browser bahwa yang mengakses adalah orang y
 ![image](https://user-images.githubusercontent.com/11188109/221479972-18ff68c8-cd28-4f8a-88b3-6c499a1d4900.png)
 
 CSS mendefinisikan wilayah untuk tata letak dengan nama container. Biasanya dibatasi dengan tag div. Silahkan membuat containernya dahulu dan simpan. Isi dengan studi kasus yang diberikan.
+
+![image](https://user-images.githubusercontent.com/11188109/221481502-a6590b6d-f039-4883-a0e5-7b1e6ff6f189.png)
+
+
 
 ## Golang Package and Environment
 
