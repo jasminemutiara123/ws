@@ -1,4 +1,19 @@
-# Golang Package and Environment
+# Otorisasi Web Service
+
+Pada bagian ini dijelaskan bagaimana membangun otorisasi pada backend dan menggunakannya di frontend, beberapa langkah yang dilakukan :
+* apa itu session dan cookies pada website
+* membuat package golang
+* membuat front end dengan tailwind container
+
+## Cookie
+
+Cookie merupakan tempat penyimpanan pada browser. Cookie di definisikan sebagai key dan value. sebagai contoh :
+
+* membuka sebuah situs pada chrome, kemudian klik kanan inspect, pilih tab Application. Kemudian pada bagian kiri pilih Storage -> Cookies -> alamat web yagn dikunjungi. maka akan terlihat Name(Key) dan Value disana.
+  ![image](https://user-images.githubusercontent.com/11188109/221475714-3b632155-031c-40ec-a859-d8a8dbedf373.png)
+
+
+## Golang Package and Environment
 
 Disini dipelajari bagaimana membuat package dan menggunakan environment variabel di golang. Pastikan :
 1. Download dan Install golang
