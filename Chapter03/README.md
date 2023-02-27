@@ -148,7 +148,7 @@ go mod tidy
 
 ### Fungsi di golang
 
-Disini dipelajari bagaimana membuat fungsi dan menggunakan environment variabel di golang.
+Disini dipelajari bagaimana membuat fungsi dan menggunakan environment variabel di golang. Pertama simpang dahulu MONGOSTRING koneksi mongodb di environtment variabel windows atau sistem operasi.
 Buat file namapackage.go yang berisi
 
 ```go
@@ -193,6 +193,16 @@ func InsertPresensi(long float64,lat float64, lokasi string, phonenumber string,
 	return helper.InsertOneDoc("adorable", "presensi", presensi)
 }
 
+func GetKaryawanFromPhoneNumber(phone_number string) (staf model.Karyawan) {
+	karyawan := MongoConnect("adorable").Collection("karyawan")
+	filter := bson.M{"phone_number": phone_number}
+	err := karyawan.FindOne(context.TODO(), filter).Decode(&staf)
+	if err != nil {
+		fmt.Printf("getKaryawanFromPhoneNumber: %v\n", err)
+	}
+	return staf
+}
+
 ```
 
 rapihkan dependensi
@@ -225,8 +235,16 @@ func TestInsertPresensi(t *testing.T) {
 	}
 	hasil:=InsertPresensi(long ,lat , lokasi , phonenumber , checkin , biodata )
 	fmt.Println(hasil)
+	
 
 }
+
+func TestGetKaryawanFromPhoneNumber(t *testing.T) {
+	phonenumber := "6811110023231"
+	biodata:=GetKaryawanFromPhoneNumber(phonenumber)
+	fmt.Println(biodata)
+}
+
 
 ```
 
