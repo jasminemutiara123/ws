@@ -17,7 +17,9 @@ Server membutuhkan identifikasi dari browser bahwa yang mengakses adalah orang y
 
 ## Membuat container berbasis tailwindcss
 
-CSS mendefinisikan wilayah untuk tata letak dengan nama container. Biasanya dibatasi dengan tag div.
+![image](https://user-images.githubusercontent.com/11188109/221479972-18ff68c8-cd28-4f8a-88b3-6c499a1d4900.png)
+
+CSS mendefinisikan wilayah untuk tata letak dengan nama container. Biasanya dibatasi dengan tag div. Silahkan membuat containernya dahulu dan simpan. Isi dengan studi kasus yang diberikan.
 
 ## Golang Package and Environment
 
