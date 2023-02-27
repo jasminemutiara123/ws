@@ -68,15 +68,25 @@ Dalam memilih basis data skala enterprise harus mengacu pada hasil survey [Gartn
 * [MongoDB](https://www.mongodb.com/)
 * MySQL : https://www.freemysqlhosting.net/, https://www.db4free.net/, https://remotemysql.com/
 
+## Pengembangan Backend
 
-## Golang Package and Environment
+Pada sesi ini pastikan anda sudah mendaftarkan diri ke heroku. Kemudian kita akan mencoba mengembangkan package golang. Langkah untuk membuat backend di golang :
+* Definisikan dahulu struct
+* Buatlah package dan fungsi menggunakan struct tersebut
+* Fungsi mengakses langsung database
+
+### Struct di golang
+
+Komunikasi di golang menggunakan json dipermudah dengan adanya struct type. Struct type ini akan mendefinisikan bagaimana bentuk json yang berkomunikasi dari frontend menuju backend.
+
+### Golang Package and Environment
 
 Disini dipelajari bagaimana membuat package dan menggunakan environment variabel di golang. Pastikan :
 1. Download dan Install golang
 2. Membuat dan menjalankan aplikasi hello word
-   Buat file main.go yang berisi
+   Buat file namapackage.go yang berisi
    ```go
-   package main
+   package namapackage
 
    import "fmt"
 
@@ -85,19 +95,17 @@ Disini dipelajari bagaimana membuat package dan menggunakan environment variabel
    }
    ```
    ```sh
-   go mod init hello
+   go mod init github.com/namauser/namapackage
    go mod tidy
    go run .
    ```
-## Struct di golang
 
-Komunikasi di golang menggunakan json dipermudah dengan adanya struct type. Struct type ini akan mendefinisikan bagaimana bentuk json yang berkomunikasi dari frontend menuju backend.
 
-## Fungsi di golang
+### Fungsi di golang
 
 Kita akan melakukkan
 
-## Testing Packace
+### Testing Packace
 
 ```go
 package autoiteung
@@ -116,7 +124,7 @@ func TestBukaKelas(t *testing.T) {
 
 ```
 
-## Publish
+### Publish Package
 GOPROXY=proxy.golang.org
 
 ```sh
@@ -124,3 +132,6 @@ git tag v0.0.1
 git push origin --tags
 go list -m github.com/whatsauth/wasocket@v0.0.1
 ```
+
+# Kerjakan
+
