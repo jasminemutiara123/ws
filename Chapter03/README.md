@@ -265,14 +265,14 @@ go list -m github.com/whatsauth/wasocket@v0.0.1
 
 # Kerjakan
 
-* Buatlah tampilan frontend sesuai studi kasus, masing-masing individu harus berbeda studi kasus
+* Buatlah tampilan frontend sesuai studi kasus, masing-masing individu harus berbeda studi kasus taruh di dalam folder frontend
 * Buatlah database mongodb dan MySQL online cloud
 * Buatlah akun heroku atau GCP atau AWS
-* Buatlah struct, package, testing, dan publish package mengakses basis data yang sudah dibuat sebelumnya
+* Buatlah struct, package, testing, dan publish package mengakses basis data yang sudah dibuat sebelumnya taruh di folder backend
 * Github Pages Sudah UP
 * Pull Request dengan Judul : 3-KELAS-NPM-NAMA menyertakan
-  * URL github pages
-  * URL pkg.dev
+  * URL github pages, beserta skrinsutan
+  * URL pkg.dev, beserta skrinsutan
   * Skrinsutan isi mongodb dari mongocompass yang sudah berisi data kasus
-  * Skrinsutasn isi mysql yang berisi dengan data kasus
-  * File Frontend dalam folder KELAS/NPM yang bisa diakses dari github pages
+  * Skrinsutasn isi mysql yang berisi dengan data kasus jika menggunakan mysql
+  * File Frontend dalam folder KELAS/NPM/frontend yang bisa diakses dari github pages
