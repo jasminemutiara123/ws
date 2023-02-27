@@ -98,7 +98,7 @@ import (
 
 type Karyawan struct {
 	ID           primitive.ObjectID `bson:"_id,omitempty" json:"_id,omitempty"`
-	Nama         string             `bson:"nama,omitempty json:"nama,omitempty"`
+	Nama         string             `bson:"nama,omitempty" json:"nama,omitempty"`
 	Phone_number string             `bson:"phone_number,omitempty" json:"phone_number,omitempty"`
 	Jabatan      string             `bson:"jabatan,omitempty" json:"jabatan,omitempty"`
 	Jam_kerja    []JamKerja         `bson:"jam_kerja,omitempty" json:"jam_kerja,omitempty"`
@@ -182,6 +182,7 @@ func InsertOneDoc(db string, collection string, doc interface{}) (insertedID int
 }
 
 func InsertPresensi(long float64,lat float64, lokasi string, phonenumber string, checkin string, biodata Karyawan) (InsertedID interface{}) {
+	var presensi Presensi
 	presensi.Latitude = long
 	presensi.Longitude = lat
 	presensi.Location = lokasi
@@ -192,8 +193,8 @@ func InsertPresensi(long float64,lat float64, lokasi string, phonenumber string,
 	return helper.InsertOneDoc("adorable", "presensi", presensi)
 }
 
-func GetKaryawanFromPhoneNumber(phone_number string) (staf model.Karyawan) {
-	karyawan := MongoConnect("adorable").Collection("karyawan")
+func GetKaryawanFromPhoneNumber(phone_number string) (staf Presensi) {
+	karyawan := MongoConnect("adorable").Collection("presensi")
 	filter := bson.M{"phone_number": phone_number}
 	err := karyawan.FindOne(context.TODO(), filter).Decode(&staf)
 	if err != nil {
