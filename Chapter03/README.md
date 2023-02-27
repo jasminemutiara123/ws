@@ -62,6 +62,12 @@ Tambahkan chart, resume dan tabel.
 
 ![image](https://user-images.githubusercontent.com/11188109/221483647-a4836c01-d913-4c04-8c18-d44fafe9c135.png)
 
+## Basis data
+
+Dalam memilih basis data skala enterprise harus mengacu pada hasil survey [Gartner](https://www.gartner.com/reviews/market/cloud-database-management-systems).Buatlah masing-masing basis data dari studi kasus yang dipilih :
+* [MongoDB](https://www.mongodb.com/)
+* MySQL : https://www.freemysqlhosting.net/, https://www.db4free.net/, https://remotemysql.com/
+
 
 ## Golang Package and Environment
 
