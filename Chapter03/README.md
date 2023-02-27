@@ -146,31 +146,63 @@ Kompilasi dependensi dengan perintah
 go mod tidy
 ```
 
-### Golang Package and Environment
-
-Disini dipelajari bagaimana membuat package dan menggunakan environment variabel di golang. Pastikan :
-1. Download dan Install golang
-2. Membuat dan menjalankan aplikasi hello word
-   Buat file namapackage.go yang berisi
-   ```go
-   package namapackage
-
-   import "fmt"
-
-   func main() {
-        fmt.Println("Hello, World!")
-   }
-   ```
-   ```sh
-   go mod init github.com/namauser/namapackage
-   go mod tidy
-   go run .
-   ```
-
-
 ### Fungsi di golang
 
-Kita akan melakukkan
+Disini dipelajari bagaimana membuat fungsi dan menggunakan environment variabel di golang.
+Buat file namapackage.go yang berisi
+
+```go
+package namapackage
+
+import (
+	"context"
+	"fmt"
+	"os"
+
+	"github.com/InformaticsResearchCenter/gowa/model"
+	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
+)
+
+var MongoString string = os.Getenv("MONGOSTRING")
+
+func MongoConnect(dbname string) (db *mongo.Database) {
+	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(model.MongoString))
+	if err != nil {
+		fmt.Printf("MongoConnect: %v\n", err)
+	}
+	return client.Database(dbname)
+}
+
+func InsertOneDoc(db string, collection string, doc interface{}) (insertedID interface{}) {
+	insertResult, err := MongoConnect(db).Collection(collection).InsertOne(context.TODO(), doc)
+	if err != nil {
+		fmt.Printf("InsertOneDoc: %v\n", err)
+	}
+	return insertResult.InsertedID
+}
+
+func fillStructPresensi(Info *types.MessageInfo, Message *waProto.Message, Checkin string) (presensi model.Presensi) {
+	presensi.Latitude, presensi.Longitude = helper.GetLiveLoc(Message)
+	presensi.Location = GetLokasi(*Message.LiveLocationMessage.DegreesLongitude, *Message.LiveLocationMessage.DegreesLatitude)
+	presensi.Phone_number = Info.Sender.User
+	presensi.Datetime = primitive.NewDateTimeFromTime(time.Now().UTC())
+	presensi.Checkin = Checkin
+	presensi.Biodata = GetBiodataFromPhoneNumber(Info.Sender.User)
+	return helper.InsertOneDoc("adorable", "presensi", presensi)
+}
+
+func InsertPresensi(Info *types.MessageInfo, Message *waProto.Message, Checkin string) (InsertedID interface{}) {
+	return helper.InsertOneDoc("adorable", "presensi", fillStructPresensi(Info, Message, Checkin))
+}
+```
+
+rapihkan dependensi
+
+```sh
+go mod tidy
+```
+
 
 ### Testing Packace
 
