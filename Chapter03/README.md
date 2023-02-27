@@ -218,6 +218,8 @@ go mod tidy
 
 ### Testing Fungsi
 
+Koneksikan dengan Database : https://youtu.be/Kh6xGWSwQ5s
+
 ```go
 package namapackage
 
