@@ -211,7 +211,7 @@ go mod tidy
 ```
 
 
-### Testing Packace
+### Testing Fungsi
 
 ```go
 package namapackage
