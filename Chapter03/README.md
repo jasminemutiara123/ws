@@ -40,7 +40,17 @@ Sebelumnya pilih dahulu studi kasus pembuatan dashboard yang akan dibuat selama 
 * Monitoring Orang Tua
 * Tagihan
 * Penerimaan Mahasiswa Baru
-* 
+* Nilai
+* BAP
+* Penelitian
+* Pengabdian Masyarakat
+* Pengembangan Bahan Ajar
+* Penggajihan dan Honor
+* Kemahasiswaan
+* elearning
+* kurikulum RPS
+* Luaran Dosen
+* Laminfokom
 
 ![image](https://user-images.githubusercontent.com/11188109/221479972-18ff68c8-cd28-4f8a-88b3-6c499a1d4900.png)
 
