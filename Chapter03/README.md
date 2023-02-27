@@ -1,16 +1,17 @@
 # Otorisasi Web Service
 
 Pada bagian ini dijelaskan bagaimana membangun otorisasi pada backend dan menggunakannya di frontend, beberapa langkah yang dilakukan :
-* apa itu session dan cookies pada website
+* Bagaimana server mengenali siapa kita?
 * membuat package golang
 * membuat front end dengan tailwind container
 
 ## Cookie
 
-Cookie merupakan tempat penyimpanan pada browser. Cookie di definisikan sebagai key dan value. sebagai contoh :
+Server membutuhkan identifikasi dari browser bahwa yang mengakses adalah orang yang punya hak akses. Bagaimana caranya server mengenali user? Caranya adalah dengan menggunakan Value dari Cookie. Cookie merupakan tempat penyimpanan pada browser. Cookie di definisikan sebagai key dan value. sebagai contoh :
 
 * membuka sebuah situs pada chrome, kemudian klik kanan inspect, pilih tab Application. Kemudian pada bagian kiri pilih Storage -> Cookies -> alamat web yagn dikunjungi. maka akan terlihat Name(Key) dan Value disana.
   ![image](https://user-images.githubusercontent.com/11188109/221475714-3b632155-031c-40ec-a859-d8a8dbedf373.png)
+* Struktur data Cookie : Name, Value, DOmain, Path, Expires. dll.
 
 
 ## Golang Package and Environment
