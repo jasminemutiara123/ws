@@ -255,9 +255,14 @@ go test
 ```
 
 ### Publish Package
+
+Setting dahulu environtment variabel di windows :
 GOPROXY=proxy.golang.org
 
+lakukan langkah berikut :
+
 ```sh
+git tag
 git tag v0.0.1
 git push origin --tags
 go list -m github.com/whatsauth/wasocket@v0.0.1
