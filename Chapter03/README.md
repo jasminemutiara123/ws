@@ -13,7 +13,7 @@ Server membutuhkan identifikasi dari browser bahwa yang mengakses adalah orang y
   ![image](https://user-images.githubusercontent.com/11188109/221475714-3b632155-031c-40ec-a859-d8a8dbedf373.png)
 * Dilihat dari gambar diatas ada Cookie bernama PHPSESSID. Cookie tersebut merupakan standar dari session PHP. Jadi apa itu session? Setelah user melakukan login. Server membuat kode hash dan disimpan sebagai file yang berisi informasi username dan role di folder tmp, kemudian kode hash tersebut diberikan kepada client melalui browser melalu Set-Header HTTP, berisi Name dan Value. Dimana Name adalah nama cookiesnya dan value adalah kode hash yang sebelumnya disimpan di server. Selama user menggunakan browser maka interaksi dengan server selalu menyertekan Cookie dalam setiap permintaannya sebagai header setiap request. Sehingga user akan dikenali sebagai username apa dan role nya apa.
 * Sekarang coba buka browser pada komputer lainnya, dan bukalah situs yang sama. Kemudian masukkan Name dan Value dari browser yang sudah login. Disini dicontohkan PHPSESSID. Selah diinputkan. silahkan refresh website. Dan lihatlah apa yang terjadi
-* Berani dengan youtube dan gmail?
+* Cobalah dengan website youtube dan gmail.
 
 
 ## Golang Package and Environment
