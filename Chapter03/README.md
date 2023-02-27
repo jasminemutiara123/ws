@@ -167,7 +167,7 @@ import (
 var MongoString string = os.Getenv("MONGOSTRING")
 
 func MongoConnect(dbname string) (db *mongo.Database) {
-	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(model.MongoString))
+	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(MongoString))
 	if err != nil {
 		fmt.Printf("MongoConnect: %v\n", err)
 	}
@@ -182,19 +182,17 @@ func InsertOneDoc(db string, collection string, doc interface{}) (insertedID int
 	return insertResult.InsertedID
 }
 
-func fillStructPresensi(Info *types.MessageInfo, Message *waProto.Message, Checkin string) (presensi model.Presensi) {
-	presensi.Latitude, presensi.Longitude = helper.GetLiveLoc(Message)
-	presensi.Location = GetLokasi(*Message.LiveLocationMessage.DegreesLongitude, *Message.LiveLocationMessage.DegreesLatitude)
-	presensi.Phone_number = Info.Sender.User
+func InsertPresensi(long float64,lat float64, lokasi string, phonenumber string, checkin string, biodata Karyawan) (InsertedID interface{}) {
+	presensi.Latitude = long
+	presensi.Longitude = lat
+	presensi.Location = lokasi
+	presensi.Phone_number = phonenumber
 	presensi.Datetime = primitive.NewDateTimeFromTime(time.Now().UTC())
-	presensi.Checkin = Checkin
-	presensi.Biodata = GetBiodataFromPhoneNumber(Info.Sender.User)
+	presensi.Checkin = checkin
+	presensi.Biodata = biodata
 	return helper.InsertOneDoc("adorable", "presensi", presensi)
 }
 
-func InsertPresensi(Info *types.MessageInfo, Message *waProto.Message, Checkin string) (InsertedID interface{}) {
-	return helper.InsertOneDoc("adorable", "presensi", fillStructPresensi(Info, Message, Checkin))
-}
 ```
 
 rapihkan dependensi
@@ -207,20 +205,35 @@ go mod tidy
 ### Testing Packace
 
 ```go
-package autoiteung
+package namapackage
 
 import (
 	"fmt"
 	"testing"
 )
 
-func TestBukaKelas(t *testing.T) {
-	nama_group := "21666-2A-PEMOGRAMAN III | TYGUSAD"
-	pesaniteung := BukaKelas(nama_group)
-	fmt.Println(pesaniteung)
+func TestInsertPresensi(t *testing.T) {
+	long := 98.345345
+	lat := 123.561651
+	lokasi := "rumah"
+	phonenumber := "6811110023231"
+	checkin := "masuk"
+	biodata := Karyawan{
+		Nama : "ujang",
+		Phone_number : "6284564562",
+		Jabatan : "tukang sapu",
+	}
+	hasil:=InsertPresensi(long ,lat , lokasi , phonenumber , checkin , biodata )
+	fmt.Println(hasil)
 
 }
 
+```
+
+Jalankan testing
+
+```sh
+go test
 ```
 
 ### Publish Package
