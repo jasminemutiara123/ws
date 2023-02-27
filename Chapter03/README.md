@@ -1,5 +1,7 @@
 # Dasar Cookie, Frontend dan Backend Package
 
+Intro : https://youtu.be/5Za6cShoNJI
+
 Pada bagian ini dijelaskan bagaimana membangun otorisasi pada backend dan menggunakannya di frontend, beberapa langkah yang dilakukan :
 * Bagaimana server mengenali siapa kita?
 * Membuat front end dengan tailwind container
@@ -17,6 +19,12 @@ Server membutuhkan identifikasi dari browser bahwa yang mengakses adalah orang y
 * Dilihat dari gambar diatas ada Cookie bernama PHPSESSID. Cookie tersebut merupakan standar dari session PHP. Jadi apa itu session? Setelah user melakukan login. Server membuat kode hash dan disimpan sebagai file yang berisi informasi username dan role di folder tmp, kemudian kode hash tersebut diberikan kepada client melalui browser melalu Set-Header HTTP, berisi Name dan Value. Dimana Name adalah nama cookiesnya dan value adalah kode hash yang sebelumnya disimpan di server. Selama user menggunakan browser maka interaksi dengan server selalu menyertakan Cookie dalam setiap permintaannya sebagai header setiap request. Sehingga user akan dikenali sebagai username apa dan role nya apa.
 * Sekarang mahasiswa coba buka browser pada komputer masing-masing, dan bukalah situs yang sama. Kemudian masukkan Name dan Value dari browser dosen. Disini dicontohkan PHPSESSID. Selah diinputkan. silahkan refresh website. Dan lihatlah apa yang terjadi
 * Cobalah dengan website kampus dilanjut dengan youtube dan gmail.
+
+## Basis data
+
+Dalam memilih basis data skala enterprise harus mengacu pada hasil survey [Gartner](https://www.gartner.com/reviews/market/cloud-database-management-systems).Buatlah masing-masing basis data dari studi kasus yang dipilih :
+* [MongoDB](https://www.mongodb.com/)
+* MySQL : https://www.freemysqlhosting.net/, https://www.db4free.net/, https://remotemysql.com/
 
 ## Membuat container berbasis tailwindcss
 
@@ -62,12 +70,6 @@ CSS mendefinisikan wilayah untuk tata letak dengan nama container. Biasanya diba
 Tambahkan chart, resume dan tabel.
 
 ![image](https://user-images.githubusercontent.com/11188109/221483647-a4836c01-d913-4c04-8c18-d44fafe9c135.png)
-
-## Basis data
-
-Dalam memilih basis data skala enterprise harus mengacu pada hasil survey [Gartner](https://www.gartner.com/reviews/market/cloud-database-management-systems).Buatlah masing-masing basis data dari studi kasus yang dipilih :
-* [MongoDB](https://www.mongodb.com/)
-* MySQL : https://www.freemysqlhosting.net/, https://www.db4free.net/, https://remotemysql.com/
 
 ## Pengembangan Backend
 
