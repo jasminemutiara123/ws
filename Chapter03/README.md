@@ -276,3 +276,4 @@ go list -m github.com/whatsauth/wasocket@v0.0.1
   * Skrinsutan isi mongodb dari mongocompass yang sudah berisi data kasus
   * Skrinsutasn isi mysql yang berisi dengan data kasus jika menggunakan mysql
   * File Frontend dalam folder KELAS/NPM/frontend yang bisa diakses dari github pages
+  * File Backend dalam folder KELAS/NPM/backend yang sudah release versi awal di pkg.go.dev
