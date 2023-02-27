@@ -9,9 +9,10 @@ Pada bagian ini dijelaskan bagaimana membangun otorisasi pada backend dan menggu
 
 Server membutuhkan identifikasi dari browser bahwa yang mengakses adalah orang yang punya hak akses. Bagaimana caranya server mengenali user? Caranya adalah dengan menggunakan Value dari Cookie dengan Name/Key yang sudah diberikan dari server. Cookie merupakan tempat penyimpanan pada browser. Cookie di definisikan sebagai key dan value. sebagai contoh :
 
-* membuka sebuah situs pada chrome, kemudian klik kanan inspect, pilih tab Application. Kemudian pada bagian kiri pilih Storage -> Cookies -> alamat web yagn dikunjungi. maka akan terlihat Name(Key) dan Value disana.
+* membuka sebuah situs pada chrome, kemudian klik kanan inspect, pilih tab Application. Kemudian pada bagian kiri pilih Storage -> Cookies -> alamat web yagn dikunjungi. maka akan terlihat Name(Key) dan Value disana. Struktur data Cookie : Name, Value, Domain, Path, Expires. dll. 
   ![image](https://user-images.githubusercontent.com/11188109/221475714-3b632155-031c-40ec-a859-d8a8dbedf373.png)
-* Struktur data Cookie : Name, Value, DOmain, Path, Expires. dll.
+* Dilihat dari gambar diatas ada Cookie bernama PHPSESSID. Cookie tersebut merupakan standar dari session PHP. Jadi apa itu session? Setelah user melakukan login. Server membuat kode hash dan disimpan sebagai file yang berisi informasi username dan role di folder tmp, kemudian kode hash tersebut diberikan kepada client melalui browser melalu Set-Header HTTP, berisi Name dan Value. Dimana Name adalah nama cookiesnya dan value adalah kode hash yang sebelumnya disimpan di server. Browser client menyimpannya sebagai cookie dengan nama yang dikehendaki server. merupakan cookie yang disimpan di server kemudian diberikan ke browser agar server mengenali user setelah login. Sekarang coba buka browser pada komputer lainnya, dan bukalah situs yang sama. 
+* Cobalah Buka browser pada tempat lain 
 
 
 ## Golang Package and Environment
