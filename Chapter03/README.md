@@ -1,4 +1,4 @@
-# Otorisasi Web Service
+# Dasar Cookie, Frontend dan Backend Package
 
 Pada bagian ini dijelaskan bagaimana membangun otorisasi pada backend dan menggunakannya di frontend, beberapa langkah yang dilakukan :
 * Bagaimana server mengenali siapa kita?
