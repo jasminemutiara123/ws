@@ -10,32 +10,31 @@ var requestOptions = {
 hasil=""
 txt=""
 
-fetch("https://cat-fact.herokuapp.com/facts", requestOptions)
+trtaabel=`
+<tr class="hover:bg-gray-50">
+        <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
+          <div class="text-sm">
+            <div class="font-medium text-gray-700">#TEXT#</div>
+          </div>
+        </th>
+      </tr>`;
+
+fetch("https://api.spacexdata.com/v5/launches/latest", requestOptions)
   .then(response => response.text())
   .then(result => tampilkan(result))
   .catch(error => console.log('error', error));
 
 function tampilkan(result){
   console.log(result);
-  hasil=JSON.parse(result);
-  trhi=trnyatabel.replace("#TEXT#",hasil[0].text)
-  txt=hasil.forEach(isikantabel);
+  hasil=JSON.parse(result);   
+  // crot = trtaabel.replace("#TEXT#",hasil[0].text)
+  txt=hasil.crew.forEach(isitabelnya);
 }
 
-function isikantabel(value){
-  txt= txt+trnyatabel.replace("#TEXT#",value.text);
-  document.getElementById("konten").innerHTML=txt;
+function isitabelnya(value){
+  console.log(value)
+  txt+= trtaabel.replace("#TEXT#",value.role);
+  document.getElementById("karpet").innerHTML=txt;
+  return txt
 }
 
-trnyatabel=`
-<tr class="hover:bg-gray-50">
-        <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
-          <div class="relative h-10 w-10">
-            <span class="absolute right-0 bottom-0 h-2 w-2 rounded-full bg-green-400 ring ring-white"></span>
-          </div>
-          <div class="text-sm">
-            <div class="font-medium text-gray-700" id="nama">#TEXT#</div>
-          </div>
-        </th>
-      </tr>
-`
