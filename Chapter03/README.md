@@ -272,7 +272,7 @@ go list -m github.com/whatsauth/wasocket@v0.0.1
 * Github Pages Sudah UP
 * Pull Request dengan Judul : 3-KELAS-NPM-NAMA menyertakan
   * URL github pages, beserta skrinsutan
-  * URL pkg.dev, beserta skrinsutan
+  * URL [pkg.go.dev](https://pkg.go.dev/), beserta skrinsutan
   * Skrinsutan isi mongodb dari mongocompass yang sudah berisi data kasus
   * Skrinsutasn isi mysql yang berisi dengan data kasus jika menggunakan mysql
   * File Frontend dalam folder KELAS/NPM/frontend yang bisa diakses dari github pages
