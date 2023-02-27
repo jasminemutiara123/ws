@@ -19,6 +19,29 @@ Server membutuhkan identifikasi dari browser bahwa yang mengakses adalah orang y
 
 ## Membuat container berbasis tailwindcss
 
+Sebelumnya pilih dahulu studi kasus pembuatan dashboard yang akan dibuat selama kuliah. Setiap orang tidak boleh sama, boleh sama topik tapi berbeda menu yang di develop. Pilihan topik dashboard :
+
+* Proyek 1
+* Proyek 2
+* Proyek 3
+* Intership 1
+* Intership 2
+* Tugas Akhir
+* DHS
+* Jadwal Kuliah
+* Undangan Rapat
+* Surat Menyurat
+* Kuisoner
+* Helpdesk
+* Profile
+* Point of Sales Kantin
+* Presensi
+* Perwalian
+* Monitoring Orang Tua
+* Tagihan
+* Penerimaan Mahasiswa Baru
+* 
+
 ![image](https://user-images.githubusercontent.com/11188109/221479972-18ff68c8-cd28-4f8a-88b3-6c499a1d4900.png)
 
 CSS mendefinisikan wilayah untuk tata letak dengan nama container. Biasanya dibatasi dengan tag div. Silahkan membuat containernya dahulu dan simpan. Isi dengan studi kasus yang diberikan.
