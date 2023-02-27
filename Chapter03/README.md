@@ -5,6 +5,8 @@ Pada bagian ini dijelaskan bagaimana membangun otorisasi pada backend dan menggu
 * membuat package golang
 * membuat front end dengan tailwind container
 
+Pastikan github pages sudah jalan di repo masing-masing.
+
 ## Cookie
 
 Server membutuhkan identifikasi dari browser bahwa yang mengakses adalah orang yang punya hak akses. Bagaimana caranya server mengenali user? Caranya adalah dengan menggunakan Value dari Cookie dengan Name/Key yang sudah diberikan dari server. Cookie merupakan tempat penyimpanan pada browser. Cookie di definisikan sebagai key dan value. sebagai contoh :
