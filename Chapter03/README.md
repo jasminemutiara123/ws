@@ -1,9 +1,12 @@
-# Otorisasi Web Service
+# Dasar Cookie, Frontend dan Backend Package
+
+Intro : https://youtu.be/5Za6cShoNJI
 
 Pada bagian ini dijelaskan bagaimana membangun otorisasi pada backend dan menggunakannya di frontend, beberapa langkah yang dilakukan :
 * Bagaimana server mengenali siapa kita?
-* membuat package golang
-* membuat front end dengan tailwind container
+* Membuat front end dengan tailwind container
+* Membuat database backend
+* membuat package golang dan merilisnya
 
 Pastikan github pages sudah jalan di repo masing-masing.
 
@@ -70,6 +73,8 @@ Dalam memilih basis data skala enterprise harus mengacu pada hasil survey [Gartn
 
 ## Pengembangan Backend
 
+Teori : https://youtu.be/_hIi3O8DHZE
+
 Pada sesi ini pastikan anda sudah mendaftarkan diri ke heroku. Kemudian kita akan mencoba mengembangkan package golang. Langkah untuk membuat backend di golang :
 * Instalasi golang
 * Definisikan dahulu struct
@@ -77,6 +82,8 @@ Pada sesi ini pastikan anda sudah mendaftarkan diri ke heroku. Kemudian kita aka
 * Fungsi mengakses langsung database
 
 ### Struct di golang
+
+https://youtu.be/td-YglzznxY
 
 Komunikasi di golang menggunakan json dipermudah dengan adanya struct type. Struct type ini akan mendefinisikan bagaimana bentuk json yang berkomunikasi dari frontend menuju backend. Sebelumnya inisiasi dulu package yang akan kita buat, masuk ke folder kerja kita dan lakukan inisialisasi package
 
@@ -214,6 +221,8 @@ go mod tidy
 
 ### Testing Fungsi
 
+Koneksikan dengan Database : https://youtu.be/Kh6xGWSwQ5s
+
 ```go
 package namapackage
 
@@ -255,9 +264,16 @@ go test
 ```
 
 ### Publish Package
+
+https://youtu.be/XLh7-D9bnTE
+
+Setting dahulu environtment variabel di windows :
 GOPROXY=proxy.golang.org
 
+lakukan langkah berikut :
+
 ```sh
+git tag
 git tag v0.0.1
 git push origin --tags
 go list -m github.com/whatsauth/wasocket@v0.0.1
@@ -265,14 +281,16 @@ go list -m github.com/whatsauth/wasocket@v0.0.1
 
 # Kerjakan
 
-* Buatlah tampilan frontend sesuai studi kasus, masing-masing individu harus berbeda studi kasus
-* Buatlah database mongodb dan MySQL online cloud
-* Buatlah akun heroku atau GCP atau AWS
-* Buatlah struct, package, testing, dan publish package mengakses basis data yang sudah dibuat sebelumnya
-* Github Pages Sudah UP
+* Buatlah tampilan frontend sesuai studi kasus, masing-masing individu harus berbeda studi kasus taruh di dalam folder frontend. Frontend minimal memiliki 5 menu, dimana setiap menu menyajikan content/isi container yang berbeda.(nilai 10 per menu/content)
+* Buatlah database mongodb atau MySQL online cloud.
+* Buatlah akun heroku atau GCP atau AWS, gunakan bank digital untuk melakukan verifikasi pembayaran.
+* Aktifkan [GitHub Student Developer Pack](https://education.github.com/pack).
+* Buatlah struct, package, testing, dan publish package mengakses basis data yang sudah dibuat sebelumnya taruh di folder backend.(nilai 5 per type struct dan 5 per fungsi)
+* Github Pages Sudah UP untuk frontend, contoh : https://universitas.bukupedia.co.id/ws/Chapter03/A/NPM/frontend/#
 * Pull Request dengan Judul : 3-KELAS-NPM-NAMA menyertakan
-  * URL github pages
-  * URL pkg.dev
+  * URL github pages, beserta skrinsutan
+  * URL [pkg.go.dev](https://pkg.go.dev/), beserta skrinsutan
   * Skrinsutan isi mongodb dari mongocompass yang sudah berisi data kasus
-  * Skrinsutasn isi mysql yang berisi dengan data kasus
-  * File Frontend dalam folder KELAS/NPM yang bisa diakses dari github pages
+  * Skrinsutasn isi mysql yang berisi dengan data kasus jika menggunakan mysql
+  * File Frontend dalam folder KELAS/NPM/frontend yang bisa diakses dari github pages
+  * File Backend dalam folder KELAS/NPM/backend yang sudah release versi awal di pkg.go.dev
