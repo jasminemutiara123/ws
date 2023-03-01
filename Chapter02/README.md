@@ -184,8 +184,8 @@ Pasti merasa aneh bukan setelah menekan tombol, tapi tampilan tidak berubah sama
 * Form dibangun dengan menggunakan CSS tailwind, desain html tidak boleh sama, harus berbeda satu sama lain.
 * Pull Request dengan nama 2-Kelas-NPM-NAMA di folder Chapter02/A/NPM, dengan deskripsi disertakan di bawah ini.
 * Sertakan skrinsutan dari live server aplikasi dan pipedream.com
-* Sertakan link Github Pages Sudah jalan di repo masing-masing
-* Sertakan skinsutan juga sertifikat 4 sertifikasi berikut:
+* Sertakan link Github Pages Sudah jalan di repo masing-masing. kode program maksimal nilai 60 poin.
+* Sertakan skinsutan juga sertifikat 4 sertifikasi berikut, masing-masing bernilai 10 poin:
   * https://www.mygreatlearning.com/academy/learn-for-free/courses/go-programming-language 
   * https://www.mindluster.com/certificate/3394
   * https://www.codecademy.com/learn/learn-go
