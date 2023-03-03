@@ -1,75 +1,42 @@
-var myHeaders = new Headers();
-myHeaders.append("token", "2f5d962d-d296-48a7-a772-10ede8b2390d");
+function PostSignUp(namalengkap, alamatemail, nohp, username, password) {
+  var myHeaders = new Headers();
+  myHeaders.append("Login", "GiparAnakKuat");
+  myHeaders.append("Content-Type", "application/json");
 
-var requestOptions = {
-  method: 'POST',
-  headers: myHeaders,
-  redirect: 'follow'
-};
+  var raw = JSON.stringify({
+    "namalengkap": namalengkap,
+    "alamatemail": alamatemail,
+    "nohp": nohp,
+    "username": username,
+    "password": password
+  });
 
-fetch("https://ghifar.requestcatcher.com/test", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+  };
 
-// Mencegah form untuk melakukan submit sebelum di-validasi
-const form = document.querySelector('form');
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  validateForm();
-});
-
-// Melakukan validasi pada setiap input
-function validateForm() {
-  const namaInput = document.querySelector('#nama');
-  const emailInput = document.querySelector('#email');
-  const hapeInput = document.querySelector('#hape');
-
-  if (namaInput.value.trim() === '') {
-    setErrorFor(namaInput, 'Nama lengkap harus diisi');
-  } else {
-    setSuccessFor(namaInput);
-  }
-
-  if (emailInput.value.trim() === '') {
-    setErrorFor(emailInput, 'Email harus diisi');
-  } else if (!isValidEmail(emailInput.value.trim())) {
-    setErrorFor(emailInput, 'Email tidak valid');
-  } else {
-    setSuccessFor(emailInput);
-  }
-
-  if (hapeInput.value.trim() === '') {
-    setErrorFor(hapeInput, 'Nomor HP harus diisi');
-  } else if (!isValidPhoneNumber(hapeInput.value.trim())) {
-    setErrorFor(hapeInput, 'Nomor HP tidak valid');
-  } else {
-    setSuccessFor(hapeInput);
-  }
+  fetch("https://eo822xg7dl2nv3f.m.pipedream.net", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      GetResponse(result);
+      document.getElementById("formsignup").style.display = 'none';
+      document.getElementById("formsuccess").style.display = 'block';
+    })
+    .catch(error => console.log('error', error));
 }
 
-// Menandai input yang tidak valid dengan style merah dan menampilkan pesan error
-function setErrorFor(input, message) {
-  const formControl = input.parentElement;
-  const errorMessage = formControl.querySelector('.error-message');
-  formControl.className = 'mb-5 error';
-  errorMessage.innerText = message;
+function PushButton() {
+  var namalengkap = document.getElementById("namalengkap").value;
+  var alamatemail = document.getElementById("alamatemail").value;
+  var nohp = document.getElementById("nohp").value;
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  PostSignUp(namalengkap, alamatemail, nohp, username, password);
 }
 
-// Menandai input yang valid dengan style hijau
-function setSuccessFor(input) {
-  const formControl = input.parentElement;
-  formControl.className = 'mb-5';
-}
-
-// Mengecek apakah email valid
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-
-// Mengecek apakah nomor HP valid
-function isValidPhoneNumber(phoneNumber) {
-  const phoneRegex = /^\d{10,12}$/;
-  return phoneRegex.test(phoneNumber);
+function GetResponse(result) {
+  document.getElementById("formsignup").innerHTML = result;
 }
