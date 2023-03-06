@@ -63,6 +63,52 @@ Login sudah berhasil kita bisa close git bash
 
 ![image](https://user-images.githubusercontent.com/11188109/223228974-93862ebe-af41-4612-81ff-3f71b5cf0a79.png)
 
+## Deployment Boiler Plate
+
+Disini kita akan mencoba testing deployment ke Heroku. Aplikasi web yang akan dilakukan deploymeny adalah Boiler Plate iTeung yang berada di repo https://github.com/aiteung/iteung
+
+![image](https://user-images.githubusercontent.com/11188109/223230699-f000db95-e50e-4db6-90a0-d257a5ad2494.png)
+
+Kita lakukan fork ke repositori kita, kita beri nama sesuai dengan nama aplikasi di heroku. Kemudian, lakukan clone repo ke komputer kita.
+
+![image](https://user-images.githubusercontent.com/11188109/223230979-cb633354-0db8-46db-a073-43f33c23cc28.png)
+
+Setelah di clone menggunakan git bash kemudian masuk ke direktori repo di PC kita. Lakukan add remote heroku sesuai nama aplikasi yang sudah kita buat di heroku dengan perintah
+
+```sh
+heroku git:remote -a gocroot
+```
+
+dimana gocroot adalah nama aplikasi kita di heroku.
+
+![image](https://user-images.githubusercontent.com/11188109/223231548-521e42b1-32f9-4559-85d9-a36b98129ca3.png)
+
+Untuk melakukan deployment kita cukup mengetikkan perintah 
+
+```sh
+git push heroku main
+```
+
+Tentunya disini kita akan menemui error pertama dari Heroku. Tenang saja, jangan panik error merupakan bagian dari pembelajaran tinggal kita baca dan ikuti saja log error yang sudah menjadi petunjuk itu.
+
+![image](https://user-images.githubusercontent.com/11188109/223232196-1f4d36e0-1d3b-4e4b-86bd-260cb2767e27.png)
+
+Terlihat kita belum mendefinisikan bahasa yang digunakan untuk aplikasi ini, untuk itu kita akan membaca cara mendefinisikan bahasa bisa dilihat di menu [Heroku Dev Center](https://devcenter.heroku.com/articles/getting-started-with-go#define-a-procfile). Diharuskan membuat Procfile yang berisi
+
+```sh
+web: bin/gocroot
+```
+
+dimana gocroot adalah nama repo kita.
+
+![image](https://user-images.githubusercontent.com/11188109/223233562-f2328906-61a4-440f-aabb-3aa8519f0c81.png)
+
+
+
+
+
+
+
 
 
 
