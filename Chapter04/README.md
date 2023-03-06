@@ -29,7 +29,33 @@ Heroku merupakan layanan cloud yang berguna untuk deployment atau pemasangan apl
 
 ![image](https://user-images.githubusercontent.com/11188109/223225509-4ad4da33-cb20-49fa-b49d-5cf1a5f18782.png)
 
-Kemudian klik Get student offer. Gunakan email kampus anda.
+Kemudian klik Get student offer. Gunakan email kampus anda, dan lanjutkan untuk mendaftarkan diri. Jika dibutuhkan verifikasi pembayaran dengan kartu kredit, bisa menggunakan Virtual Credit Card atau Virtual Debit Card atau Debit Card kartu dari Bank Digital yang bisa didapatkan dengan install aplikasi di handphone. Opsional sebagai pelengkap keamanan akun. Install juga aplikasi Google Authenticator https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en&pli=1
+
+![image](https://user-images.githubusercontent.com/11188109/223226670-c7afe93a-5bdc-4a74-be12-94945dbc807f.png)
+
+## Dashboard Heroku
+
+Setelah login, masuk ke laman https://dashboard.heroku.com/apps. Maka akan muncul list aplikasi yang sudah kita buat. Klik New dan pilih Create new app untuk melakukan deployment aplikasi baru kita.
+
+![image](https://user-images.githubusercontent.com/11188109/223227248-d1e1019f-04ff-4f5e-942b-eb65549302ed.png)
+
+Masukkan nama aplikasi kita, dan pilih lokasi server kita apakah amerika atau eropa. Kemudian klik Create app.
+
+![image](https://user-images.githubusercontent.com/11188109/223227515-c25abd89-5b08-483a-bc47-432e5c4b0b28.png)
+
+Lakukan instalasi Heroku CLI, untuk menghubungkan komputer kita dengan server heroku. Link Instalasi https://devcenter.heroku.com/articles/heroku-cli
+
+![image](https://user-images.githubusercontent.com/11188109/223227952-1e166ee3-78db-4860-8956-6b643a3b57eb.png)
+
+Pilih 64-bit installer
+
+![image](https://user-images.githubusercontent.com/11188109/223228151-831c4735-be1c-413d-ad1c-3ab4583995fa.png)
+
+Lanjutkan sampai selesai langkah instalasinya
+
+![image](https://user-images.githubusercontent.com/11188109/223228251-84e36310-2fac-47b6-aa8d-9d3a6789f7f9.png)
+
+
 
 Pre requisite :
 1. Akun heroku yang diaktifkan dengan github student pack
