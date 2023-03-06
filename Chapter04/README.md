@@ -33,7 +33,7 @@ Kemudian klik Get student offer. Gunakan email kampus anda, dan lanjutkan untuk 
 
 ![image](https://user-images.githubusercontent.com/11188109/223226670-c7afe93a-5bdc-4a74-be12-94945dbc807f.png)
 
-## Dashboard Heroku
+## Dashboard Heroku dan Heroku cli
 
 Setelah login, masuk ke laman https://dashboard.heroku.com/apps. Maka akan muncul list aplikasi yang sudah kita buat. Klik New dan pilih Create new app untuk melakukan deployment aplikasi baru kita.
 
@@ -54,6 +54,15 @@ Pilih 64-bit installer
 Lanjutkan sampai selesai langkah instalasinya
 
 ![image](https://user-images.githubusercontent.com/11188109/223228251-84e36310-2fac-47b6-aa8d-9d3a6789f7f9.png)
+
+Buka git bash dan ketik heroku login, maka akan muncul button login heroku di browser, klik saja login. Kemudian di gitbash akan ada tulisan Logged in as .....
+
+![image](https://user-images.githubusercontent.com/11188109/223228723-ee5b3b88-69ba-4798-bbde-3abe0fe99265.png)
+
+Login sudah berhasil kita bisa close git bash
+
+![image](https://user-images.githubusercontent.com/11188109/223228974-93862ebe-af41-4612-81ff-3f71b5cf0a79.png)
+
 
 
 
