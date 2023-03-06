@@ -7,7 +7,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://developer.ebay.com/develop/apis", requestOptions)
+fetch("https://reqres.in/#support-heading", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
